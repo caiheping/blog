@@ -1,0 +1,2782 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-CN" prefix="og: http://ogp.me/ns#" class="no-js"> <!--<![endif]-->
+
+
+<!-- BEGIN head -->
+<head>
+
+  <!-- Title -->
+  <title>给2019前端的5个建议 - WEB前端 - 伯乐在线</title>
+
+  <!-- Meta Tags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Favicon & Mobileicon -->
+  <link rel="shortcut icon" href="http://web.jobbole.com/wp-content/uploads/sites/11/2014/12/favicon.png"/>
+  <link rel="apple-touch-icon" href="http://web.jobbole.com/wp-content/themes/jobboleblogv3/mobileicon.png"/>
+
+  <!-- RSS, Atom & Pingbacks -->
+  <link rel="alternate" title="WEB前端 &#8211; 伯乐在线 RSS Feed" href="http://web.jobbole.com/feed/"/>
+  <link rel="alternate" title="RSS .92" href="http://web.jobbole.com/feed/rss/"/>
+  <link rel="alternate" title="Atom 0.3" href="http://web.jobbole.com/feed/atom/"/>
+  <link rel="pingback" href="http://web.jobbole.com/xmlrpc.php"/>
+
+  <!-- Theme Hook -->
+
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.13 - http://yoast.com/wordpress/seo/ -->
+  <meta name="description"
+        content="由于历史原因，开发框架同时基于 React 和 Angular，考虑到产品的复杂性、人员的短缺和技术背景各异，我们尝试了各种方法打磨工具体系来提升开发效率，以下是节选的5项主要方法。"/>
+  <link rel="canonical" href="http://web.jobbole.com/95665/"/>
+  <meta property='og:locale' content='zh_CN'/>
+  <meta property='og:type' content='article'/>
+  <meta property='og:title' content='给2019前端的5个建议 - WEB前端 - 伯乐在线'/>
+  <meta property='og:description'
+        content='由于历史原因，开发框架同时基于 React 和 Angular，考虑到产品的复杂性、人员的短缺和技术背景各异，我们尝试了各种方法打磨工具体系来提升开发效率，以下是节选的5项主要方法。'/>
+  <meta property='og:url' content='http://web.jobbole.com/95665/'/>
+  <meta property='og:site_name' content='WEB前端 - 伯乐在线'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/a70308df5f40331ea3dee82d603b2f20.jpg'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/db985117904e67a61bd60474546eb2e2.jpg'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/216dbb0b40b804f61b7e56b80c2042c9.jpg'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/724646cc471f463f3a313e12df15d2fe.jpg'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/54e40368f781190629c81a9ee525335d.jpg'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/17720c5a890aee1674b668b7e1835e5a.jpg'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/4b3966158652cbc6695e30260a536463.jpg'/>
+  <meta property='og:image' content='http://jbcdn2.b0.upaiyun.com/2019/02/92179b0400235b9aed9faab7329ec14d.jpg'/>
+  <!-- / Yoast WordPress SEO plugin. -->
+
+  <link rel='stylesheet' id='dashicons-css' href='http://web.jobbole.com/wp-includes/css/dashicons.min.css?ver=4.5.16'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='thickbox-css' href='http://web.jobbole.com/wp-includes/js/thickbox/thickbox.css?ver=4.5.16'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='fancybox-css-css'
+        href='http://web.jobbole.com/wp-content/plugins/jobbole-wp-plugin/css/jquery.fancybox.css?ver=2.1.5'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='jobbole-wp-css-css'
+        href='http://web.jobbole.com/wp-content/plugins/jobbole-wp-plugin/css/jobbole-wp-plugin.css?ver=1.0.30'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='crayon_colorbox_css-css'
+        href='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/util/tag-editor/colorbox/colorbox.css?ver=2.7.1.1'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='crayon_style-css'
+        href='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/css/src/crayon_style.css?ver=2.7.1.1'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='crayon_global_style-css'
+        href='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/css/src/global_style.css?ver=2.7.1.1'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='crayon-theme-github-css'
+        href='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/themes/github/github.css?ver=2.7.1.1'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='crayon-font-monaco-css'
+        href='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=2.7.1.1'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='v48fv_images-css'
+        href='http://web.jobbole.com/wp-content/plugins/mu-widgets/library/base/public/css/images.css?ver=1.2.v48fv'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='v48fv_front-css'
+        href='http://web.jobbole.com/wp-content/plugins/mu-widgets/library/base/public/css/front.css?ver=1.2.v48fv'
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='v48fv_common-css'
+        href='http://web.jobbole.com/wp-content/plugins/mu-widgets/library/base/public/css/common.css?ver=1.2.v48fv'
+        type='text/css' media='all'/>
+  <script type='text/javascript' src='http://web.jobbole.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/jobbole-wp-plugin/js/jquery.fancybox.pack.js?ver=2.1.5'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/jobbole-wp-plugin/js/superfish.js?ver=1.4.8'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/jobbole-wp-plugin/js/menu-effects.js?ver=1.5.1'></script>
+  <script type='text/javascript'>
+    /* <![CDATA[ */
+    var JobboleAjax = {"ajaxurl": "http:\/\/web.jobbole.com\/wp-admin\/admin-ajax.php"};
+    /* ]]> */
+  </script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/jobbole-wp-plugin/js/jobbole-wp-plugin.js?ver=1.0.62'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/util/tag-editor/colorbox/jquery.colorbox-min.js?ver=2.7.1.1'></script>
+  <script type='text/javascript'>
+    /* <![CDATA[ */
+    var CrayonSyntaxSettings = {
+      "version": "2.7.1.1",
+      "is_admin": "0",
+      "ajaxurl": "http:\/\/web.jobbole.com\/wp-admin\/admin-ajax.php",
+      "prefix": "crayon-",
+      "setting": "crayon-setting",
+      "selected": "crayon-setting-selected",
+      "changed": "crayon-setting-changed",
+      "special": "crayon-setting-special",
+      "orig_value": "data-orig-value",
+      "debug": ""
+    };
+    var CrayonSyntaxStrings = {
+      "copy": "\u4f7f\u7528 %s \u590d\u5236\uff0c\u4f7f\u7528 %s \u7c98\u8d34\u3002",
+      "minimize": "\u70b9\u51fb\u5c55\u5f00\u4ee3\u7801"
+    };
+    /* ]]> */
+  </script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/js/src/util.js?ver=2.7.1.1'></script>
+  <script type='text/javascript'>
+    /* <![CDATA[ */
+    var CrayonTagEditorSettings = {
+      "home_url": "http:\/\/web.jobbole.com",
+      "css": "crayon-te",
+      "css_selected": "crayon-selected",
+      "code_css": "#crayon-code",
+      "url_css": "#crayon-url",
+      "url_info_css": "#crayon-te-url-info",
+      "lang_css": "#crayon-lang",
+      "title_css": "#crayon-title",
+      "mark_css": "#crayon-mark",
+      "range_css": "#crayon-range",
+      "inline_css": "crayon-inline",
+      "inline_hide_css": "crayon-hide-inline",
+      "inline_hide_only_css": "crayon-hide-inline-only",
+      "hl_css": "#crayon-highlight",
+      "switch_html": "#content-html",
+      "switch_tmce": "#content-tmce",
+      "tinymce_button_generic": ".mce-btn",
+      "tinymce_button": "a.mce_crayon_tinymce,.mce-i-crayon_tinymce",
+      "tinymce_button_unique": "mce_crayon_tinymce",
+      "tinymce_highlight": "mce-active",
+      "submit_css": "#crayon-te-ok",
+      "cancel_css": "#crayon-te-cancel",
+      "content_css": "#crayon-te-content",
+      "dialog_title_css": "#crayon-te-title",
+      "submit_wrapper_css": "#crayon-te-submit-wrapper",
+      "data_value": "data-value",
+      "attr_sep": ":",
+      "css_sep": "_",
+      "fallback_lang": "js",
+      "add_text": "Add Code",
+      "edit_text": "Edit Code",
+      "quicktag_text": "crayon",
+      "submit_add": "\u63d2\u5165",
+      "submit_edit": "\u4fdd\u5b58",
+      "bar": "#crayon-te-bar",
+      "bar_content": "#crayon-te-bar-content",
+      "extensions": {
+        "scpt": "applescript",
+        "applescript": "applescript",
+        "swf": "as",
+        "fla": "as",
+        "cs": "c#",
+        "h": "c++",
+        "hh": "c++",
+        "hpp": "c++",
+        "hxx": "c++",
+        "h++": "c++",
+        "cc": "c++",
+        "cpp": "c++",
+        "cxx": "c++",
+        "c++": "c++",
+        "pas": "delphi",
+        "java": "java",
+        "class": "java",
+        "jar": "java",
+        "mv": "miva",
+        "mvc": "miva",
+        "mvt": "miva",
+        "m": "objc",
+        "mm": "objc",
+        "psc": "papyrus",
+        "pl": "perl",
+        "py": "python",
+        "pyw": "python",
+        "pyc": "python",
+        "pyo": "python",
+        "pyd": "python",
+        "rb": "ruby",
+        "rbx": "ruby",
+        "rhtml": "ruby",
+        "vbs": "vb"
+      }
+    };
+    /* ]]> */
+  </script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/util/tag-editor/crayon_tag_editor.js?ver=2.7.1.1'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/js/src/jquery.popup.js?ver=2.7.1.1'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/js/src/crayon.js?ver=2.7.1.1'></script>
+  <script type='text/javascript'
+          src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/modernizr.js?ver=2.5.3'></script>
+  <link rel='https://api.w.org/' href='http://web.jobbole.com/wp-json/'/>
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://web.jobbole.com/xmlrpc.php?rsd"/>
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://web.jobbole.com/wp-includes/wlwmanifest.xml"/>
+  <link rel='shortlink' href='http://web.jobbole.com/?p=95665'/>
+  <link rel="alternate" type="application/json+oembed"
+        href="http://web.jobbole.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fweb.jobbole.com%2F95665%2F"/>
+  <link rel="alternate" type="text/xml+oembed"
+        href="http://web.jobbole.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fweb.jobbole.com%2F95665%2F&#038;format=xml"/>
+  <script type="text/javascript">
+    jQuery(function ($) {
+      $('.comment-reply-link').click(function (e) {
+        e.preventDefault();
+        var args = $(this).data('onclick');
+        args = args.replace(/.*\(|\)/gi, '').replace(/\"|\s+/g, '');
+        args = args.split(',');
+        tinymce.EditorManager.execCommand('mceRemoveEditor', true, 'comment_editor');
+        addComment.moveForm.apply(addComment, args);
+        tinymce.EditorManager.execCommand('mceAddEditor', true, 'comment_editor');
+      });
+
+      $('#cancel-comment-reply-link').click(function (e) {
+        e.preventDefault();
+        tinymce.EditorManager.execCommand('mceRemoveEditor', true, 'comment_editor');
+        tinymce.EditorManager.execCommand('mceAddEditor', true, 'comment_editor');
+      });
+    });
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" media="screen"
+        href="http://web.jobbole.com/wp-content/themes/jobboleblogv3/style.css?ver=1.0.67">
+  <style>
+    *::selection {
+      background: #0099cc;
+    }
+
+    *::-moz-selection {
+      background: #0099cc;
+    }
+
+    body {
+      background: #ffffff
+    }
+
+    a,
+    .tabs ul.nav li a:hover,
+    .tabs ul.nav li.active a,
+    .dropcap,
+    .toggle.hover .toggle-title,
+    li.comment cite a:hover,
+    h3.widget-title,
+    .post-meta .meta-title:hover,
+    .the-latest a:hover h4,
+    .aw_socialcounter_widget li a:hover,
+    .aw_tabbed_widget #tab-latest-comments a:hover {
+      color: #0099cc;
+    }
+
+    a:hover {
+      color: #b30000;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0099cc;
+    }
+
+    #searchsubmit,
+    .highlight,
+    .aw_tabbed_widget .tabs ul.nav li.active a, footer .aw_tabbed_widget .tabs ul.nav li.active a,
+    #top .aw_tabbed_widget .tabs ul.nav li.active a,
+    .aw_tabbed_widget .tabs ul.nav li a:hover,
+    footer .aw_tabbed_widget .tabs ul.nav li a:hover,
+    #top .aw_tabbed_widget .tabs ul.nav li a:hover,
+    .aw_twitter_widget .twitter-icon, .testimonial-icon,
+    #top-closed:hover,
+    .flex-control-nav a:hover,
+    .flex-control-nav a.flex-active {
+      background-color: #0099cc;
+    }
+
+    .submit {
+      background-color: #0099cc;
+      border-color: #007399;
+    }
+
+    .submit:hover {
+      background-color: #b30000;
+      border-color: #860000;
+    }
+
+    #searchsubmit:hover {
+      background-color: #b30000;
+    }
+
+    .toggle.hover .toggle-icon {
+      border-top-color: #0099cc;
+    }
+
+    .toggle.hover.active .toggle-icon {
+      border-bottom-color: #0099cc;
+    }
+
+    .flex-direction-nav li .flex-prev:hover {
+      border-right-color: #0099cc;
+    }
+
+    .flex-direction-nav li .flex-next:hover {
+      border-left-color: #0099cc;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .aw_tabbed_widget .tabs ul.nav li a:hover, .tabs ul.nav li.active a {
+        color: #0099cc;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .tabs ul.nav li a:hover, .tabs ul.nav li.active a {
+        color: #0099cc;
+      }
+    }
+  </style>
+
+  <!--[if IE 8]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+  <![endif]-->
+
+  <!-- Links: RSS + Atom Syndication + Pingback etc. -->
+  <link rel="alternate" type="application/rss+xml" title="WEB前端 &#8211; 伯乐在线 RSS Feed"
+        href="http://web.jobbole.com/feed/"/>
+  <link rel="alternate" type="text/xml" title="RSS .92" href="http://web.jobbole.com/feed/rss/"/>
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://web.jobbole.com/feed/atom/"/>
+  <link rel="pingback" href="http://web.jobbole.com/xmlrpc.php"/>
+
+  <!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="single single-post postid-95665 single-format-standard chrome">
+
+
+<nav id="top-nav" class="menu-nav">
+
+  <!-- BEGIN .container -->
+  <div class="container">
+
+    <div class="grid-7 hide-on-480 hide-on-767">
+      <ul id="menu-main-menu" class="menu left">
+        <li class="menu-item">
+          <a href="http://www.jobbole.com">首页</a>
+        </li>
+        <li class="menu-item">
+          <a href="http://top.jobbole.com">资讯</a>
+        </li>
+        <li class="menu-item">
+          <span><a href="http://blog.jobbole.com">文章 <i class="fa fa-angle-double-down"></i></a></span>
+          <ul class="sub-menu sf-js-enabled">
+            <li class="menu-item"><a href="http://blog.jobbole.com">全部文章</a></li>
+            <li class="menu-item"><a href="http://web.jobbole.com">Web前端</a></li>
+            <li class="menu-item"><a href="http://python.jobbole.com">Python开发</a></li>
+            <li class="menu-item"><a href="http://www.importnew.com/?utm_source=home-top-nav">Java技术</a></li>
+            <li class="menu-item"><a href="http://android.jobbole.com">Android应用</a></li>
+            <li class="menu-item"><a href="http://ios.jobbole.com">iOS应用</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="http://hao.jobbole.com">资源</a>
+        </li>
+
+        <li class="menu-item">
+          <a href="http://date.jobbole.com"><i class="fa fa-heart-o pinkiconcolor"></i> 相亲</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="grid-5">
+      <ul id="menu-main-menu" class="menu">
+        <li class="menu-item hide-on-768-wider left">
+          <span><a href="#">频道 <i class="fa fa-angle-double-down"></i></a></span>
+          <ul class="sub-menu sf-js-enabled">
+            <li class="menu-item"><a href="http://www.jobbole.com">首页</a></li>
+            <li class="menu-item"><a href="http://top.jobbole.com">资讯</a></li>
+            <li class="menu-item"><a href="http://group.jobbole.com">小组</a></li>
+            <li class="menu-item"><a href="http://date.jobbole.com">相亲 <i class="fa fa-heart-o pinkiconcolor"></i></a>
+            </li>
+            <li class="menu-item"><a href="http://hao.jobbole.com">资源</a></li>
+            <li class="menu-item"><a href="http://blog.jobbole.com">全部文章</a></li>
+            <li class="menu-item"><a href="http://web.jobbole.com">前端</a></li>
+            <li class="menu-item"><a href="http://python.jobbole.com">Python</a></li>
+            <li class="menu-item"><a href="http://www.importnew.com/">Java</a></li>
+            <li class="menu-item"><a href="http://android.jobbole.com">安卓</a></li>
+            <li class="menu-item"><a href="http://ios.jobbole.com">iOS</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-item"><a href="http://www.jobbole.com/login?redirect=http%3A%2F%2Fweb.jobbole.com%2F95665%2F"><i
+          class="fa fa-sign-in"></i> 登录</a></li>
+        <li class="menu-item"><a href="http://www.jobbole.com/register"><i class="fa fa-user-plus"></i> 注册</a></li>
+
+
+        <li class="menu-item"><a title="帮助" href="http://blog.jobbole.com/87622/"><i
+          class="fa fa-question-circle fa-lg"></i></a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+
+  </div>
+  <!-- END .container -->
+
+</nav>
+<!-- END #top-nav -->
+
+<!-- BEGIN #wrapper -->
+<div id="wrapper" class="container">
+
+  <!-- BEGIN header -->
+  <header>
+
+
+    <div class="header-wrapper">
+
+      <!-- BEGIN #logo -->
+      <div id="logo" class="leaderboard-true">
+        <a href="http://web.jobbole.com"><img
+          src="http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/img/jobbole-logo.png"
+          alt="WEB前端 &#8211; 伯乐在线"/></a>
+      </div>
+      <!-- END #logo -->
+
+      <!-- BEGIN #leaderboard -->
+      <div id="leaderboard">
+
+        <a href='http://date.jobbole.com/4164/' target='_blank'><img width='728' height='90'
+                                                                     src='http://wx2.sinaimg.cn/mw690/bfdcef89gy1ffimc8bgf3j20k802i3zn.jpg'/></a>
+      </div>
+      <!-- END #leaderboard -->
+
+      <div class="clear"></div>
+
+    </div>
+
+
+    <div class="clear"></div>
+
+    <!-- BEGIN #main-nav -->
+    <nav id="main-nav" class="grid-12 menu-nav">
+      <div class="menu-sub-menu-container">
+        <ul id="main-nav-menu" class="menu">
+          <li id="menu-item-81438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81438"><a
+            href="http://web.jobbole.com/">首页</a></li>
+          <li id="menu-item-81437"
+              class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-81437"><a
+            href="http://web.jobbole.com/all-posts/">所有文章</a></li>
+          <li id="menu-item-81439" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-81439">
+            <a href="http://web.jobbole.com/category/javascript-2/">JavaScript</a></li>
+          <li id="menu-item-81440" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-81440">
+            <a href="http://web.jobbole.com/category/html5/">HTML5</a></li>
+          <li id="menu-item-81441" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-81441">
+            <a href="http://web.jobbole.com/category/css/">CSS</a></li>
+          <li id="menu-item-85853"
+              class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-85853">
+            <a href="http://web.jobbole.com/category/basic-tech/">基础技术</a></li>
+          <li id="menu-item-85849" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-85849">
+            <a href="http://web.jobbole.com/category/career/">职场</a></li>
+          <li id="menu-item-81442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81442"><a
+            href="http://hao.jobbole.com/category/web-front-end/">工具资源</a></li>
+          <li id="menu-item-87236" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87236"><a
+            href="http://group.jobbole.com/category/tech/webfront/">前端小组</a></li>
+          <li id="menu-item-81824"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81824"><a
+            href="#">更多频道▼</a>
+            <ul class="sub-menu">
+              <li id="menu-item-81825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81825">
+                <a href="http://ios.jobbole.com">iOS</a></li>
+              <li id="menu-item-81827" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81827">
+                <a href="http://www.importnew.com">Java</a></li>
+              <li id="menu-item-81828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81828">
+                <a href="http://android.jobbole.com">Android</a></li>
+              <li id="menu-item-81829" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81829">
+                <a href="http://python.jobbole.com">Python</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </nav>
+    <!-- END #main-nav -->
+    <div class="clear"></div>
+
+  </header>
+  <!-- END header -->
+
+  <div id="breadcrumb" class="grid-12 margin-20">
+    <div class="breadcrumb-wrapper"><!-- Breadcrumb NavXT 4.4.0 -->
+      <a title="Go to 伯乐在线." href="http://www.jobbole.com" class="main-home">伯乐在线</a> &gt; <a
+        title="Go to WEB前端 - 伯乐在线." href="http://web.jobbole.com" class="home">WEB前端 - 伯乐在线</a> &gt; <a
+        title="Go to 所有文章." href="http://web.jobbole.com/all-posts/" class="post-root post-post">所有文章</a> &gt; <a
+        title="Go to the 基础技术 category archives." href="http://web.jobbole.com/category/basic-tech/" class="category">基础技术</a>
+      &gt; 给2019前端的5个建议
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <!-- BEGIN .grid-8 -->
+  <div class="grid-8">
+
+
+    <!-- BEGIN .post -->
+    <div class="post-95665 post type-post status-publish format-standard hentry category-basic-tech tag-779 odd"
+         id="post-95665">
+
+      <!-- BEGIN .entry-header -->
+      <div class="entry-header">
+
+
+        <h1>给2019前端的5个建议</h1>
+
+
+      </div>
+      <!-- BEGIN .entry-header -->
+
+      <!-- BEGIN .entry-meta -->
+      <div class="entry-meta">
+
+        <p class="entry-meta-hide-on-mobile">
+
+          2019/02/08 &middot; <a href="http://web.jobbole.com/category/basic-tech/" rel="category tag">基础技术</a>
+
+
+          &middot; <a href="http://web.jobbole.com/tag/%e5%89%8d%e7%ab%af/">前端</a>
+
+        </p>
+
+        <!-- JiaThis Button BEGIN -->
+        <!-- div class="jiathis_style" style="display: block; margin: 0 0px; clear: both;"><span class="jiathis_txt">分享到：</span>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_qzone"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_douban"></a>
+        <a class="jiathis_button_readitlater"></a>
+        <a class="jiathis_button_evernote"></a>
+        <a class="jiathis_button_ydnote"></a>
+        <a href="http://www.jiathis.com/share?uid=1745061" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+        </div -->
+        <!-- JiaThis Button END -->
+
+
+      </div>
+      <!-- END .entry-meta -->
+
+      <!-- BEGIN .entry -->
+      <div class="entry">
+
+
+        <div class='copyright-area'>原文出处： <a target='_blank' href='https://zhuanlan.zhihu.com/p/55357377'>camsong</a>&nbsp;&nbsp;&nbsp;
+        </div>
+        <p>2019 农历新年即将到来，是时候总结一下团队过去一年的技术沉淀。过去一年我们支撑的数据相关业务突飞猛进，其中两个核心平台级产品代码量分别达到30+万行和80+万行，TS
+          模块数均超过1000个，协同开发人员增加到20+人。由于历史原因，开发框架同时基于 React 和
+          Angular，考虑到产品的复杂性、人员的短缺和技术背景各异，我们尝试了各种方法打磨工具体系来提升开发效率，以下是节选的5项主要方法。</p>
+        <h2>一、基于 Redux 的状态管理</h2>
+        <p>从2013年React发布至今已近6个年头，前端框架逐渐形成 React/Vue/Angular
+          三足鼎立之势。几年前还在争论单向绑定和双向绑定孰优孰劣，现在三大框架已经不约而同选择单向绑定，双向绑定沦为单纯的语法糖。无论你是否承认，框架间的差异越来越小，加上 <a
+            href="http://link.zhihu.com/?target=https%3A//ant.design/" target="_blank" rel="nofollow noreferrer">Ant-Design</a>/<a
+            href="http://link.zhihu.com/?target=https%3A//fusion.design/" target="_blank" rel="nofollow noreferrer">Fusion-Design</a>/<a
+            href="http://link.zhihu.com/?target=https%3A//ng.ant.design/" target="_blank" rel="nofollow noreferrer">NG-ZORRO</a>/<a
+            href="http://link.zhihu.com/?target=http%3A//element-cn.eleme.io" target="_blank" rel="nofollow noreferrer">ElementUI</a>
+          组件库的成熟，选择任一你熟悉的框架都能高效完成业务。</p>
+        <p>那接下来的核心问题是什么？我们认为是<b>状态管理</b>。简单应用使用组件内 State 方便快捷，但随着应用复杂度上升，会发现数据散落在不同的组件，组件通信会变得异常复杂。我们先后尝试过原生 Redux、分形
+          Fractal 的思路、自研类 Mobx 框架、Angular Service，最终认为 Redux 依旧是复杂应用数据流处理最佳选项之一。</p>
+        <p>庆幸的是除了 React 社区，Vue 社区有类似的 Vuex，Angular 社区有 NgRx 也提供了几乎同样的能力，甚至 NgRx 还可以无缝使用 redux-devtools 来调试状态变化。</p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/a70308df5f40331ea3dee82d603b2f20.jpg" width="1470"/>
+        </figure>
+        <p>无论如何优化，始终要遵循 Redux 三原则：</p>
+        <ol>
+          <li>Single source of truth（组件 Stateless，数据来源于 Store）</li>
+          <li>State is read-only（只能通过触发 action 来改变 State）</li>
+          <li>Changes are made with pure functions（Reducer 是纯函数）</li>
+        </ol>
+        <p>这三个问题我们是通过自研 <a href="http://link.zhihu.com/?target=https%3A//github.com/nefe/iron-redux" target="_blank"
+                           rel="nofollow noreferrer">iron-redux</a> 库来解决。</p>
+        <p>最终我们得到如下扁平的状态树。虽庞大但有序，你可以快速而明确的访问任何数据。</p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/db985117904e67a61bd60474546eb2e2.jpg" width="640"/></p>
+          <figcaption>Redux 状态树</figcaption>
+        </figure>
+        <p><b>如何减少样板代码？</b><br/>
+          使用原生 Redux，一个常见的请求处理如下。非常冗余，这是 Redux 被很多人诟病的原因</p>
+        <div>
+          <!-- Crayon Syntax Highlighter v2.7.1.1 -->
+
+          <div id="crayon-5c621a5a72f89089816202"
+               class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate"
+               data-settings=" minimize scroll-always"
+               style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show"
+                 style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span
+              class="crayon-title"></span>
+              <div class="crayon-tools"
+                   style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;">
+                <div class="crayon-button crayon-nums-button" title="切换是否显示行编号">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-plain-button" title="纯文本显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-wrap-button" title="切换自动换行">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-expand-button" title="点击展开代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-copy-button" title="复制代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-popup-button" title="在新窗口中显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+              </div>
+            </div>
+            <div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick"
+                                                     readonly
+                                                     style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;">
+const initialState = {
+  loading = true,
+  error = false,
+  data = []
+};
+
+function todoApp(state = initialState, action) {
+  switch (action.type) {
+    case DATA_LOADING:
+      return {
+        ...state,
+        loading: true,
+        error: false
+      }
+    case DATA_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: action.payload
+      }
+    case DATA_ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: true
+      }
+    default:
+      return state
+  }
+}
+</textarea></div>
+            <div class="crayon-main" style="">
+              <table class="crayon-table">
+                <tr class="crayon-row">
+                  <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;">
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-1">1</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-2">2</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-3">3</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-4">4</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-5">5</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-6">6</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-7">7</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-8">8</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-9">9</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-10">10</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-11">11</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-12">12</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-13">13</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-14">14</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-15">15</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-16">16</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-17">17</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-18">18</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-19">19</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-20">20</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-21">21</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-22">22</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-23">23</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-24">24</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-25">25</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-26">26</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-27">27</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-28">28</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-29">29</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f89089816202-30">30</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f89089816202-31">31</div>
+                    </div>
+                  </td>
+                  <td class="crayon-code">
+                    <div class="crayon-pre"
+                         style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-1"><span
+                        class="crayon-m">const</span><span class="crayon-h"> </span><span
+                        class="crayon-v">initialState</span><span class="crayon-h"> </span><span
+                        class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-2"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">loading</span><span
+                        class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span
+                        class="crayon-t">true</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-3"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">error</span><span
+                        class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span
+                        class="crayon-t">false</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-4"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">data</span><span
+                        class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span
+                        class="crayon-sy">[</span><span class="crayon-sy">]</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-5"><span
+                        class="crayon-sy">}</span><span class="crayon-sy">;</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-6">&nbsp;</div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-7"><span
+                        class="crayon-t">function</span><span class="crayon-h"> </span><span
+                        class="crayon-e">todoApp</span><span class="crayon-sy">(</span><span
+                        class="crayon-v">state</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span
+                        class="crayon-h"> </span><span class="crayon-v">initialState</span><span
+                        class="crayon-sy">,</span><span class="crayon-h"> </span><span
+                        class="crayon-v">action</span><span class="crayon-sy">)</span><span
+                        class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-8"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">switch</span><span
+                        class="crayon-h"> </span><span class="crayon-sy">(</span><span
+                        class="crayon-v">action</span><span class="crayon-sy">.</span><span class="crayon-v">type</span><span
+                        class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">case</span><span class="crayon-h"> </span><span
+                        class="crayon-v">DATA_LOADING</span><span class="crayon-o">:</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-10"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span
+                        class="crayon-v">state</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-12"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">loading</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">true</span><span
+                        class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-13"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">error</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-t">false</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-14"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-15"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">case</span><span class="crayon-h"> </span><span
+                        class="crayon-v">DATA_SUCCESS</span><span class="crayon-o">:</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-16"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-17"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span
+                        class="crayon-v">state</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-18"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">loading</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">false</span><span
+                        class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-19"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">data</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-v">action</span><span class="crayon-sy">.</span><span
+                        class="crayon-i">payload</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-20"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">case</span><span class="crayon-h"> </span><span
+                        class="crayon-v">DATA_ERROR</span><span class="crayon-o">:</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-22"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-23"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span
+                        class="crayon-v">state</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-24"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">loading</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">false</span><span
+                        class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-25"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">error</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-t">true</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-26"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-27"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">default</span><span class="crayon-o">:</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-28"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">return</span><span class="crayon-h"> </span><span
+                        class="crayon-i">state</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-29"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f89089816202-30"><span
+                        class="crayon-sy">}</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f89089816202-31">&nbsp;</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- [Format Time: 0.0032 seconds] -->
+
+        </div>
+        <p>使用 iron-redux 后：</p>
+        <div>
+          <!-- Crayon Syntax Highlighter v2.7.1.1 -->
+
+          <div id="crayon-5c621a5a72f94501557031"
+               class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate"
+               data-settings=" minimize scroll-always"
+               style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show"
+                 style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span
+              class="crayon-title"></span>
+              <div class="crayon-tools"
+                   style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;">
+                <div class="crayon-button crayon-nums-button" title="切换是否显示行编号">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-plain-button" title="纯文本显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-wrap-button" title="切换自动换行">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-expand-button" title="点击展开代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-copy-button" title="复制代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-popup-button" title="在新窗口中显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+              </div>
+            </div>
+            <div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick"
+                                                     readonly
+                                                     style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;">
+class InitialState {
+  data = new AsyncTuple(true);
+}
+
+function reducer(state = new InitialState(), action) {
+  switch (action.type) {
+    /** 省略其它 action 处理 */
+    default:
+      return AsyncTuple.handleAll(prefix, state, action);
+  }
+}
+</textarea></div>
+            <div class="crayon-main" style="">
+              <table class="crayon-table">
+                <tr class="crayon-row">
+                  <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;">
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f94501557031-1">1</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f94501557031-2">2</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f94501557031-3">3</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f94501557031-4">4</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f94501557031-5">5</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f94501557031-6">6</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f94501557031-7">7</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f94501557031-8">8</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f94501557031-9">9</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f94501557031-10">10</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f94501557031-11">11</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f94501557031-12">12</div>
+                    </div>
+                  </td>
+                  <td class="crayon-code">
+                    <div class="crayon-pre"
+                         style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+                      <div class="crayon-line" id="crayon-5c621a5a72f94501557031-1"><span
+                        class="crayon-t">class</span><span class="crayon-h"> </span><span
+                        class="crayon-e">InitialState</span><span class="crayon-h"> </span><span
+                        class="crayon-sy">{</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f94501557031-2"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">data</span><span
+                        class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span
+                        class="crayon-r">new</span><span class="crayon-h"> </span><span
+                        class="crayon-e">AsyncTuple</span><span class="crayon-sy">(</span><span
+                        class="crayon-t">true</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f94501557031-3"><span class="crayon-sy">}</span>
+                      </div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f94501557031-4">&nbsp;</div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f94501557031-5"><span
+                        class="crayon-t">function</span><span class="crayon-h"> </span><span
+                        class="crayon-e">reducer</span><span class="crayon-sy">(</span><span
+                        class="crayon-v">state</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span
+                        class="crayon-h"> </span><span class="crayon-r">new</span><span class="crayon-h"> </span><span
+                        class="crayon-e">InitialState</span><span class="crayon-sy">(</span><span
+                        class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span
+                        class="crayon-v">action</span><span class="crayon-sy">)</span><span
+                        class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f94501557031-6"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">switch</span><span
+                        class="crayon-h"> </span><span class="crayon-sy">(</span><span
+                        class="crayon-v">action</span><span class="crayon-sy">.</span><span class="crayon-v">type</span><span
+                        class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f94501557031-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-c">/** 省略其它 action 处理 */</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f94501557031-8"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">default</span><span
+                        class="crayon-o">:</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f94501557031-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">return</span><span class="crayon-h"> </span><span
+                        class="crayon-v">AsyncTuple</span><span class="crayon-sy">.</span><span class="crayon-e">handleAll</span><span
+                        class="crayon-sy">(</span><span class="crayon-v">prefix</span><span
+                        class="crayon-sy">,</span><span class="crayon-h"> </span><span
+                        class="crayon-v">state</span><span class="crayon-sy">,</span><span
+                        class="crayon-h"> </span><span class="crayon-v">action</span><span
+                        class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f94501557031-10"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f94501557031-11"><span class="crayon-sy">}</span>
+                      </div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f94501557031-12">&nbsp;</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- [Format Time: 0.0016 seconds] -->
+
+        </div>
+        <p>代码量减少三分之二！！<br/>
+          主要做了这2点：</p>
+        <ol>
+          <li>引入了预设的 <code>AsyncTuple</code> 类型，就是 <code>{data: [], loading: boolean, error: boolean}</code> 这样的数据结构；
+          </li>
+          <li>使用 <code>AsyncTuple.handleAll</code> 处理 LOADING/SUCCESS/ERROR 这 3 种 action，handleAll 的代码很简单，使用 if 判断
+            action.type 的后缀即可，源码在<a
+              href="http://link.zhihu.com/?target=https%3A//github.com/nefe/iron-redux/blob/master/index.ts%23L288"
+              target="_blank" rel="nofollow noreferrer">这里</a>。
+          </li>
+        </ol>
+        <p>曾经 React 和 Angular 是两个很难调和的框架，开发中浪费了我们大量的人力。通过使用轻量级的 iron-redux，完全遵循 Redux 核心原则下，我们内部<b>实现了除组件层以外几乎所有代码的复用。开发规范、工具库达成一致，开发人员能够无缝切换，框架差异带来的额外成本降到很低</b>。
+        </p>
+        <h2>二、全面拥抱 TypeScript</h2>
+        <p>TypeScript 目前可谓大红大紫，根据 <a
+          href="http://link.zhihu.com/?target=https%3A//2018.stateofjs.com/javascript-flavors/overview/" target="_blank"
+          rel="nofollow noreferrer">2018 stateofjs</a>，超过 50% 的使用率以及 90% 的满意度，甚至连 Jest 也正在<a
+          href="http://link.zhihu.com/?target=https%3A//github.com/facebook/jest/pull/7554" target="_blank"
+          rel="nofollow noreferrer">从 Flow 切换到 TS</a>。如果你还没有使用，可以考虑切换，绝对能给项目带来很大提升。过去一年，我们从部分使用 TS 变为全面切换到
+          TS，包括我们自己开发的工具库等。</p>
+        <p>TS 最大的优势是它提供了强大的静态分析能力，结合 TSLint 能对代码做到更加严格的检查约束。传统的 EcmaScript 由于没有静态类型，即使有了 ESLint 也只能做到很基本的检查，一些 typo
+          问题可能线上出了 Bug 后才被发现。</p>
+        <p>下图是一个前端应用常见的4层架构。<b>代码和工具全面拥抱 TS 后，实现了从后端 API 接口到 View 组件的全链路静态分析，具有了完善的代码提示和校验能力。</b></p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/216dbb0b40b804f61b7e56b80c2042c9.jpg" width="1330"/></p>
+          <figcaption>前后端协作简图</figcaption>
+        </figure>
+        <p>除了上面讲的 iron-redux，我们引入 Pont 实现前端取数，它可以自动把后端 API 映射到前端可调用的请求方法。</p>
+        <p><b>Pont 实现原理：</b><br/>
+          <b><a href="http://link.zhihu.com/?target=https%3A//github.com/nefe/pont" target="_blank"
+                rel="nofollow noreferrer">Pont</a>（法语：桥） 是我们研发的前端取数层框架</b>。对接的后端 API 使用 Java Swagger，Swagger 能提供所有 API
+          的元信息，包括请求和响应的类型格式。Pont 解析 API 元信息生成 TS 的取数函数，这些取数函数类型完美，并挂载到 API 模块下。最终代码中取数效果是这样的：</p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/724646cc471f463f3a313e12df15d2fe.jpg" width="1674"/></p>
+          <figcaption>接口名、参数、返回值自动提示</figcaption>
+        </figure>
+        <p><b>Pont 实现的效果有：</b></p>
+        <ol>
+          <li>根据方法名自动匹配 url、method，并且对应到 prams、response 类型完美，并能自动提示</li>
+          <li>后端 API 接口变更后，前端相关联的请求会自动报错，再也不担心后端悄悄改接口前端不知晓</li>
+          <li>再也不需要前后端接口约定文档，使用代码保证前端取数和后端接口定义完全一致</li>
+        </ol>
+        <p>另外 iron-redux 能接收到 Pont 接口响应数据格式，并推导出整个 Redux 状态树的静态类型定义，Store 中的数据完美的类型提示。效果如下：</p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/54e40368f781190629c81a9ee525335d.jpg" width="1672"/></p>
+          <figcaption>Redux 状态树自动提示</figcaption>
+        </figure>
+        <p>最终 <b>TS 让代码更加健壮，尤其是对于大型项目，编译通过几乎就代表运行正常，也给重构增加了很多信心</b>。</p>
+        <h2>三、回归 Sass/Less</h2>
+        <p>2015 年我们就开始实践 CSS Modules，包括后来的 styled-components 等，到 2019 年 css-in-js 方案依旧争论不休，虽然它确实解决了一些 CSS
+          语言天生的问题，但同时增加了不少成本，新手不够友好、全局样式覆盖成本高涨、伪类处理复杂、与AntD等组件库结合有坑。与此同时 Sass/Less 社区也在飞速发展，尤其是 <a
+            href="http://link.zhihu.com/?target=https%3A//stylelint.io/" target="_blank" rel="nofollow noreferrer">Stylelint</a>
+          的成熟，可以通过技术约束的手段来避免 CSS 的 Bad Parts。</p>
+        <ol>
+          <li>全局污染：约定每个样式文件只能有一个顶级类，如 <code>.home-page{ .top-nav {/**/}, .main-content{ /**/ } }</code>。如果有多个顶级类，可以使用
+            Stylelint rule 检测并给出警告。
+          </li>
+          <li>依赖管理不彻底。借助 webpack 的 css-loader，已够用。</li>
+          <li>JS 和 CSS 变量共享。关于 JS 和 Sass/Less 变量共享，我们摸索出了自己的解法：</li>
+        </ol>
+        <div>
+          <!-- Crayon Syntax Highlighter v2.7.1.1 -->
+
+          <div id="crayon-5c621a5a72f9b196266412"
+               class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate"
+               data-settings=" minimize scroll-always"
+               style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show"
+                 style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span
+              class="crayon-title"></span>
+              <div class="crayon-tools"
+                   style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;">
+                <div class="crayon-button crayon-nums-button" title="切换是否显示行编号">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-plain-button" title="纯文本显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-wrap-button" title="切换自动换行">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-expand-button" title="点击展开代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-copy-button" title="复制代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-popup-button" title="在新窗口中显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+              </div>
+            </div>
+            <div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick"
+                                                     readonly
+                                                     style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;">
+// src/styles/variables.js
+module.exports = {
+  // 主颜色
+  'primary-color': '#0C4CFF',
+  // 出错颜色
+  'error-color': '#F15533',
+  // 成功颜色
+  'success-color': '#35B34A',
+};
+</textarea></div>
+            <div class="crayon-main" style="">
+              <table class="crayon-table">
+                <tr class="crayon-row">
+                  <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;">
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9b196266412-1">1</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9b196266412-2">2</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9b196266412-3">3</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9b196266412-4">4</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9b196266412-5">5</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9b196266412-6">6</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9b196266412-7">7</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9b196266412-8">8</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9b196266412-9">9</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9b196266412-10">10</div>
+                    </div>
+                  </td>
+                  <td class="crayon-code">
+                    <div class="crayon-pre"
+                         style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+                      <div class="crayon-line" id="crayon-5c621a5a72f9b196266412-1"><span class="crayon-c">// src/styles/variables.js</span>
+                      </div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9b196266412-2"><span
+                        class="crayon-v">module</span><span class="crayon-sy">.</span><span
+                        class="crayon-v">exports</span><span class="crayon-h"> </span><span
+                        class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9b196266412-3"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-c">// 主颜色</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9b196266412-4"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'primary-color'</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-s">'#0C4CFF'</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9b196266412-5"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-c">// 出错颜色</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9b196266412-6"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'error-color'</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-s">'#F15533'</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9b196266412-7"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-c">// 成功颜色</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9b196266412-8"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'success-color'</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-s">'#35B34A'</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9b196266412-9"><span
+                        class="crayon-sy">}</span><span class="crayon-sy">;</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9b196266412-10">&nbsp;</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- [Format Time: 0.0009 seconds] -->
+
+        </div>
+        <p>以下为 Webpack 配置，注入变量到 Scss</p>
+        <div>
+          <!-- Crayon Syntax Highlighter v2.7.1.1 -->
+
+          <div id="crayon-5c621a5a72f9f929599998"
+               class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate"
+               data-settings=" minimize scroll-always"
+               style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show"
+                 style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span
+              class="crayon-title"></span>
+              <div class="crayon-tools"
+                   style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;">
+                <div class="crayon-button crayon-nums-button" title="切换是否显示行编号">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-plain-button" title="纯文本显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-wrap-button" title="切换自动换行">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-expand-button" title="点击展开代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-copy-button" title="复制代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-popup-button" title="在新窗口中显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+              </div>
+            </div>
+            <div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick"
+                                                     readonly
+                                                     style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;">
+// webpack.config.js
+const styleVariables = require('src/styles/variables');
+
+// ...
+      {
+        test: /.scss$/,
+        use: [
+          'style-loader',
+          'css-loader?sourceMap&amp;minimize',
+          {
+            loader: 'sass-loader',
+            options: {
+              data: Object.keys(styleVariables)
+                .map(key =&gt; `$${key}: ${styleVariables[key]};`)
+                .join('n'),
+              sourceMap: true,
+              sourceMapContents: true
+            }
+          }
+        ]
+      }
+//...
+</textarea></div>
+            <div class="crayon-main" style="">
+              <table class="crayon-table">
+                <tr class="crayon-row">
+                  <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;">
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-1">1</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-2">2</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-3">3</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-4">4</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-5">5</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-6">6</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-7">7</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-8">8</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-9">9</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-10">10</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-11">11</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-12">12</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-13">13</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-14">14</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-15">15</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-16">16</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-17">17</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-18">18</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-19">19</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-20">20</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-21">21</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72f9f929599998-22">22</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72f9f929599998-23">23</div>
+                    </div>
+                  </td>
+                  <td class="crayon-code">
+                    <div class="crayon-pre"
+                         style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-1"><span class="crayon-c">// webpack.config.js</span>
+                      </div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-2"><span
+                        class="crayon-m">const</span><span class="crayon-h"> </span><span class="crayon-v">styleVariables</span><span
+                        class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span
+                        class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'src/styles/variables'</span><span
+                        class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-3">&nbsp;</div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-4"><span
+                        class="crayon-c">// ...</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">{</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-6"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">test</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span
+                        class="crayon-sy">.</span><span class="crayon-v">scss</span><span
+                        class="crayon-sy">$</span><span class="crayon-o">/</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-st">use</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-sy">[</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-8"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-s">'style-loader'</span><span class="crayon-sy">,</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-s">'css-loader?sourceMap&amp;minimize'</span><span class="crayon-sy">,</span>
+                      </div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-10"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">{</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">loader</span><span class="crayon-o">:</span><span
+                        class="crayon-h"> </span><span class="crayon-s">'sass-loader'</span><span
+                        class="crayon-sy">,</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-12"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">options</span><span class="crayon-o">:</span><span
+                        class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-13"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">data</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span
+                        class="crayon-t">Object</span><span class="crayon-sy">.</span><span class="crayon-e">keys</span><span
+                        class="crayon-sy">(</span><span class="crayon-v">styleVariables</span><span
+                        class="crayon-sy">)</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-14"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">.</span><span class="crayon-e">map</span><span class="crayon-sy">(</span><span
+                        class="crayon-v">key</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span
+                        class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">`</span><span
+                        class="crayon-sy">$</span><span class="crayon-sy">$</span><span class="crayon-sy">{</span><span
+                        class="crayon-v">key</span><span class="crayon-sy">}</span><span class="crayon-o">:</span><span
+                        class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-sy">{</span><span
+                        class="crayon-v">styleVariables</span><span class="crayon-sy">[</span><span
+                        class="crayon-v">key</span><span class="crayon-sy">]</span><span class="crayon-sy">}</span><span
+                        class="crayon-sy">;</span><span class="crayon-sy">`</span><span class="crayon-sy">)</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-15"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">.</span><span class="crayon-e">join</span><span
+                        class="crayon-sy">(</span><span class="crayon-s">'n'</span><span class="crayon-sy">)</span><span
+                        class="crayon-sy">,</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-16"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">sourceMap</span><span class="crayon-o">:</span><span
+                        class="crayon-h"> </span><span class="crayon-t">true</span><span class="crayon-sy">,</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-17"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-v">sourceMapContents</span><span class="crayon-o">:</span><span
+                        class="crayon-h"> </span><span class="crayon-t">true</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-18"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">}</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-19"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">}</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-20"><span
+                        class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">]</span>
+                      </div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                        class="crayon-sy">}</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72f9f929599998-22"><span
+                        class="crayon-c">//...</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72f9f929599998-23">&nbsp;</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- [Format Time: 0.0025 seconds] -->
+
+        </div>
+        <p>在 scss 文件中，可以自己引用变量</p>
+        <div>
+          <!-- Crayon Syntax Highlighter v2.7.1.1 -->
+
+          <div id="crayon-5c621a5a72fa3191751307"
+               class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate"
+               data-settings=" minimize scroll-always"
+               style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show"
+                 style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span
+              class="crayon-title"></span>
+              <div class="crayon-tools"
+                   style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;">
+                <div class="crayon-button crayon-nums-button" title="切换是否显示行编号">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-plain-button" title="纯文本显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-wrap-button" title="切换自动换行">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-expand-button" title="点击展开代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-copy-button" title="复制代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+                <div class="crayon-button crayon-popup-button" title="在新窗口中显示代码">
+                  <div class="crayon-button-icon"></div>
+                </div>
+              </div>
+            </div>
+            <div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick"
+                                                     readonly
+                                                     style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;">
+// page.scss
+.button {
+  background: $primary-color;
+}
+</textarea></div>
+            <div class="crayon-main" style="">
+              <table class="crayon-table">
+                <tr class="crayon-row">
+                  <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;">
+                      <div class="crayon-num" data-line="crayon-5c621a5a72fa3191751307-1">1</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72fa3191751307-2">2</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72fa3191751307-3">3</div>
+                      <div class="crayon-num crayon-striped-num" data-line="crayon-5c621a5a72fa3191751307-4">4</div>
+                      <div class="crayon-num" data-line="crayon-5c621a5a72fa3191751307-5">5</div>
+                    </div>
+                  </td>
+                  <td class="crayon-code">
+                    <div class="crayon-pre"
+                         style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+                      <div class="crayon-line" id="crayon-5c621a5a72fa3191751307-1"><span
+                        class="crayon-c">// page.scss</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72fa3191751307-2"><span
+                        class="crayon-sy">.</span><span class="crayon-i">button</span><span
+                        class="crayon-h"> </span><span class="crayon-sy">{</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72fa3191751307-3"><span
+                        class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">background</span><span
+                        class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span
+                        class="crayon-v">primary</span><span class="crayon-o">-</span><span
+                        class="crayon-v">color</span><span class="crayon-sy">;</span></div>
+                      <div class="crayon-line crayon-striped-line" id="crayon-5c621a5a72fa3191751307-4"><span
+                        class="crayon-sy">}</span></div>
+                      <div class="crayon-line" id="crayon-5c621a5a72fa3191751307-5">&nbsp;</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- [Format Time: 0.0006 seconds] -->
+
+        </div>
+        <h2>四、开发工具覆盖全链路</h2>
+        <p>2019 年，你几乎不可能再开发出 React/Angular/Vue 级别的框架，也没必要再造 Ant-Design/Fusion-Design/Ng-Zorro 这样的轮子。难道就没有机会了吗？</p>
+        <p>当然有，结合你自身的产品开发流程，依旧有很多机会。下面是常规项目的开发流程图，任何一个环节只要深挖，都有提升空间。如果你能通过工具减少一个或多个环节，带来的价值更大。</p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/17720c5a890aee1674b668b7e1835e5a.jpg" width="1384"/></p>
+          <figcaption>产品研发流程</figcaption>
+        </figure>
+        <p>单拿其中的『开发』环节展开，就有很多可扩展的场景：</p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/4b3966158652cbc6695e30260a536463.jpg" width="1644"/></p>
+          <figcaption>前端开发工具流</figcaption>
+        </figure>
+        <p>一个有代表性的例子是，我们开发了国际化工具 <a href="http://link.zhihu.com/?target=https%3A//github.com/nefe/kiwi" target="_blank"
+                                    rel="nofollow noreferrer">kiwi</a>。它同样具有 TS 的类型完美，非常强大的文案提示，另外还有：</p>
+        <ol>
+          <li>VS Code 插件 <a
+            href="http://link.zhihu.com/?target=https%3A//marketplace.visualstudio.com/items%3FitemName%3Dundefinedvs.vscode-i18n-linter"
+            target="_blank" rel="nofollow noreferrer">kiwi linter</a>，自动对中文文案标红，如果已有翻译文案能自动完成替换
+          </li>
+          <li>Shell 命令全量检查出没有翻译的文案，批量提交给翻译人员</li>
+          <li>Codemod 脚本自动实现旧的国际化方案向 Kiwi 迁移，成本级低</li>
+        </ol>
+        <p>除了以上三点，未来还计划开发浏览器插件来检查漏翻文案，利用 Husky 在 git 提交前对漏翻文案自动做机器翻译等等。</p>
+        <p>未来如果你只提供一个代码库，那它的价值会非常局限。你可以参照上面的图表，开发相应的扩展来丰富生态。如果你是新手，推荐学习下编译原理和对应的扩展开发规范。</p>
+        <h2>五、严格彻底的 Code Review</h2>
+        <p>过去的一年，我们一共进行了 1200+ 多次 Code Review(CR)，很多同事从刚开始不好意思提 MR 到后来追着别人 Review，CR 成为每个人的习惯。通过 CR
+          让项目中任何一行代码都至少被两人触达过，减少了绝大多数的低级错误，提升了代码质量，这也是帮助新人成长最快的方式之一。</p>
+        <figure><img src="http://jbcdn2.b0.upaiyun.com/2019/02/92179b0400235b9aed9faab7329ec14d.jpg" width="1386"/></p>
+          <figcaption>其中一个项目MR截图</figcaption>
+        </figure>
+        <p><b>Code Review 的几个技巧：</b></p>
+        <ol>
+          <li>No magic</li>
+          <li>Explicit not implicit</li>
+          <li>覆盖度比深度重要，覆盖度追求100%</li>
+          <li>频率比仪式感重要，坐公交蹲厕所打开手机都可以 Review 别人代码，不需要专门组织会议</li>
+          <li>粒度要尽可能小，一个组件一个方法均可，可以结合 Git Flow</li>
+          <li>24h 小时内处理，无问题直接 merge，有问题一定要留 comment，并且提供 action</li>
+          <li>对于亟待上线来不及 Review 的代码，可以先合并上线，上线后再补充 Review</li>
+          <li>需要自上而下的推动，具有完善的规范，同时定期总结 Review 经验来丰富开发规范</li>
+          <li>CR 并不只是为了找错，看到好的代码，不要吝啬你的赞美</li>
+          <li>本质是鼓励开发者间更多的沟通，互相学习，营造技术文化氛围</li>
+        </ol>
+        <h2>总结</h2>
+        <p>以上5点当然不是我们技术的全部。除此之外我们还实践了移动端开发、可视化图表/WebGL、Web Worker、GraphQL、性能优化等等，但这些还停留在术的层面，未来到一定程度会拿出来分享。</p>
+        <p>如果你也准备或正在开发复杂的前端应用，同时团队人员多样技术背景各异，可以参考以上5点，使用 Redux 实现规范清晰可预测的状态管理，深耕 TypeScript 来提升代码健壮性和可维护性，借助各种 Lint
+          工具回归简单方便的 CSS，不断打磨自己的开发工具来保证开发规范高效，并严格彻底实行 Code Review 促进人的交流和提升。</p>
+        <p>Links</p>
+        <ol>
+          <li>Pont：<a href="http://link.zhihu.com/?target=https%3A//github.com/nefe/pont" target="_blank"
+                      rel="nofollow noreferrer">nefe/pont</a></li>
+          <li>Kiwi：<a href="http://link.zhihu.com/?target=https%3A//github.com/nefe/kiwi" target="_blank"
+                      rel="nofollow noreferrer">nefe/kiwi</a></li>
+          <li>iron-redux: <a href="http://link.zhihu.com/?target=https%3A//github.com/nefe/iron-redux" target="_blank"
+                             rel="nofollow noreferrer">nefe/iron-redux</a></li>
+          <li><a href="http://link.zhihu.com/?target=https%3A//2018.stateofjs.com/" target="_blank"
+                 rel="nofollow noreferrer">The State of JavaScript 2018</a></li>
+        </ol>
+        <blockquote><p>如果你觉得本文对你有帮助，请猛击喜欢鼓励一下</p></blockquote>
+
+        <script language="javascript">
+          var randomNum = Math.round(Math.random() * 1);
+          var innerHTML = new Array(2);
+          innerHTML[0] = "如果有人让你推荐前端技术书，请让他看这个列表 ->《<a target='_blank' href='http://web.jobbole.com/86734/'>经典前端技术书籍</a>》";
+          innerHTML[1] = "如果有人让你推荐前端技术书，请让他看这个列表 ->《<a target='_blank' href='http://web.jobbole.com/86734/'>经典前端技术书籍</a>》";
+          var widgetHTML = "<div id='single-page-inner-widget'>" + innerHTML[randomNum] + "</div>";
+          document.write(widgetHTML);
+        </script>
+
+
+        <div class="post-adds">
+          <span data-post-id="95665" class=" btn-bluet-bigger href-style vote-post-up   register-user-only "><i
+            class="fa  fa-thumbs-o-up"></i> <h10 id="95665votetotal">1</h10> 赞</span>
+          <span data-book-type="1" data-site-id="11" data-item-id="95665" data-item-type="1"
+                class=" btn-bluet-bigger href-style bookmark-btn  register-user-only "><i
+            class="fa fa-bookmark-o  "></i>  收藏</span>
+
+          <a href="#article-comment"><span class="btn-bluet-bigger href-style hide-on-480"><i
+            class="fa fa-comments-o"></i>  评论</span></a>
+
+
+          <!-- JiaThis Button BEGIN -->
+          <div class="jiathis_style_24x24"
+               style="display: inline-flex; position: relative; margin: 0; clear: both;float: right;">
+            <a class="jiathis_button_tsina"></a>
+            <a class="jiathis_button_weixin"></a>
+            <a class="jiathis_button_qzone"></a>
+            <a class="jiathis_button_fb hide-on-480"></a>
+            <a href="http://www.jiathis.com/share?uid=1745061"
+               class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+          </div>
+
+        </div>
+
+
+        <!-- BEGIN #author-bio -->
+
+
+        <!-- END #author-bio -->
+      </div>
+      <!-- END .entry -->
+
+
+      <!--script type="text/javascript" >
+      var jiathis_config={
+        data_track_clickback:false,
+        title:"分享从伯乐在线看到的一篇好文章 ",
+        summary:"《给2019前端的5个建议》",
+        pic:"http://jbcdn2.b0.upaiyun.com/2019/02/a70308df5f40331ea3dee82d603b2f20.jpg",
+        appkey:{
+               "tsina": 1473879058    },
+        ralateuid:{
+          "tsina": 5261893910	},
+        hideMore:false
+      }
+      </script>
+      <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1745061" charset="utf-8"></script -->
+      <!-- JiaThis Button END -->
+      <div class="textwidget"><p><a href='http://group.jobbole.com/22945/' target='_blank'><img
+        src='http://wx3.sinaimg.cn/mw690/bfdcef89ly1fx2sxvbnktj20h803caau.jpg'/></a></p>
+      </div>
+
+    </div>
+    <!-- END .post -->
+    <div style="text-align: left;">
+      <h3>相关文章</h3>
+      <ul style="font-size: 13px; list-style: disc inside;">
+        <li>
+                    <span class="digg-item-updated-title">
+                        <a title="当代前端应该怎么写这个hello world？" target="_blank"
+                           href="http://web.jobbole.com/95574/?utm_source=blog.jobbole.com&utm_medium=relatedPosts">当代前端应该怎么写这个hello world？</a>
+                                            </span>
+        </li>
+        <li>
+                    <span class="digg-item-updated-title">
+                        <a title="想写好前端，先练好内功" target="_blank"
+                           href="http://web.jobbole.com/95532/?utm_source=blog.jobbole.com&utm_medium=relatedPosts">想写好前端，先练好内功</a>
+                                            </span>
+        </li>
+        <li>
+                    <span class="digg-item-updated-title">
+                        <a title="2019年如何打造自己的“前端品牌”" target="_blank"
+                           href="http://web.jobbole.com/95506/?utm_source=blog.jobbole.com&utm_medium=relatedPosts">2019年如何打造自己的“前端品牌”</a>
+                                            </span>
+        </li>
+        <li>
+                    <span class="digg-item-updated-title">
+                        <a title="了解一些额外知识，让前端开发锦上添花" target="_blank"
+                           href="http://web.jobbole.com/94855/?utm_source=blog.jobbole.com&utm_medium=relatedPosts">了解一些额外知识，让前端开发锦上添花</a>
+                                            </span>
+        </li>
+        <li>
+                    <span class="digg-item-updated-title">
+                        <a title="我所理解的前端" target="_blank"
+                           href="http://web.jobbole.com/94177/?utm_source=blog.jobbole.com&utm_medium=relatedPosts">我所理解的前端</a>
+                         &middot; <a href="http://web.jobbole.com/94177/#comments" target="_blank"><i
+                      class="fa fa-comments-o"></i> 1</a>                    </span>
+        </li>
+      </ul>
+    </div>
+
+
+    <div style="text-align: left;">
+      <h3>可能感兴趣的话题</h3>
+      <ul style="font-size: 13px; list-style: disc inside;">
+        <li>
+          <a href="http://group.jobbole.com/33487/?utm_source=web.jobbole.com&utm_medium=article-related-group-topic"
+             title="Windows和Linux简单共享文件夹" target="_blank">Windows和Linux简单共享文件夹</a>
+        </li>
+        <li>
+          <a href="http://group.jobbole.com/33481/?utm_source=web.jobbole.com&utm_medium=article-related-group-topic"
+             title="谁可以给一份这样的神经网络代码" target="_blank">谁可以给一份这样的神经网络代码</a>
+        </li>
+        <li>
+          <a href="http://group.jobbole.com/33466/?utm_source=web.jobbole.com&utm_medium=article-related-group-topic"
+             title="在Android自助安装Linux" target="_blank">在Android自助安装Linux</a>
+        </li>
+        <li>
+          <a href="http://group.jobbole.com/33450/?utm_source=web.jobbole.com&utm_medium=article-related-group-topic"
+             title="某些关于神经网络的不当观点和用法" target="_blank">某些关于神经网络的不当观点和用法</a>
+        </li>
+        <li>
+          <a href="http://group.jobbole.com/33377/?utm_source=web.jobbole.com&utm_medium=article-related-group-topic"
+             title="写了一个Vim-Markdown预览插件，欢迎使用" target="_blank">写了一个Vim-Markdown预览插件，欢迎使用</a>
+          &middot; <a href="http://group.jobbole.com/33377/#comments" target="_blank"><i class="fa fa-comments-o"></i> 2</a>
+        </li>
+        <li>
+          <a href="http://group.jobbole.com/33336/?utm_source=web.jobbole.com&utm_medium=article-related-group-topic"
+             title="一线互联网常见的14个Java面试题，你颤抖了吗程序员" target="_blank">一线互联网常见的14个Java面试题，你颤抖了吗程序员</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="article-comment" class="dot-box center-align">
+
+      <a href="http://www.jobbole.com/login?redirect=http://web.jobbole.com/95665/">
+        <button type="button" class="btn btn-non-transparent">登录后评论</button>
+      </a>
+
+      <a target="_blank" href="http://www.jobbole.com/register">
+        <button type="button" class="btn btn-primary">新用户注册</button>
+      </a>
+
+      <br/><br/>
+      <span>直接登录</span>
+      <style type="text/css">.t_login_text {
+        margin: 0;
+        padding: 0;
+      }
+
+      .t_login_button {
+        margin: 0;
+        padding: 5px 0;
+      }
+
+      .t_login_button a {
+        margin: 0;
+        padding-right: 3px;
+        line-height: 25px
+      }
+
+      .t_login_button img {
+        display: inline;
+        border: none;
+      }</style><!-- 使用社交帐号登录 来自 WordPress连接微博 插件 --><span class="connectBox1 t_login_button"><a
+      href="http://web.jobbole.com/wp-content/plugins/wp-connect/login.php?go=weixin&redirect_url=http%3A%2F%2Fweb.jobbole.com%2F95665%2F"
+      title="微信" rel="nofollow"><img
+      src="http://web.jobbole.com/wp-content/plugins/wp-connect/images/login/btn_weixin.png"/></a><a
+      href="http://web.jobbole.com/wp-content/plugins/wp-connect/login.php?go=qzone&redirect_url=http%3A%2F%2Fweb.jobbole.com%2F95665%2F"
+      title="QQ" rel="nofollow"><img
+      src="http://web.jobbole.com/wp-content/plugins/wp-connect/images/login/btn_qzone.png"/></a><a
+      href="http://web.jobbole.com/wp-content/plugins/wp-connect/login.php?go=sina&redirect_url=http%3A%2F%2Fweb.jobbole.com%2F95665%2F"
+      title="新浪微博" rel="nofollow"><img
+      src="http://web.jobbole.com/wp-content/plugins/wp-connect/images/login/btn_sina.png"/></a><a
+      href="http://web.jobbole.com/wp-content/plugins/wp-connect/login.php?go=douban&redirect_url=http%3A%2F%2Fweb.jobbole.com%2F95665%2F"
+      title="豆瓣" rel="nofollow"><img
+      src="http://web.jobbole.com/wp-content/plugins/wp-connect/images/login/btn_douban.png"/></a><a
+      href="http://web.jobbole.com/wp-content/plugins/wp-connect/login.php?go=github&redirect_url=http%3A%2F%2Fweb.jobbole.com%2F95665%2F"
+      title="GitHub" rel="nofollow"><img
+      src="http://web.jobbole.com/wp-content/plugins/wp-connect/images/login/btn_github.png"/></a></span></div>
+
+
+    <div id="comment_list" class="comments">
+
+
+    </div>
+
+
+  </div>
+  <!-- END .grid-8 -->
+
+  <!-- BEGIN #sidebar -->
+  <div id="sidebar" class="grid-4">
+
+    <div id="text-13" class="widget widget_text">
+      <div class="textwidget"><p><a href='http://group.jobbole.com/22945/' target='_blank'><img
+        src='http://wx4.sinaimg.cn/mw690/bfdcef89ly1fx2sxh355zj208c06ywf5.jpg'/></a></p>
+      </div>
+    </div>
+    <h3 class="widget-title">
+      <a target="_blank"
+         href="http://group.jobbole.com/category/tech/webfront/?utm_source=web.jobbole.com&utm_medium=sidebar-group-topics-more">前端小组话题</a>
+      <span style="float:right;"><a target="_blank" href="http://group.jobbole.com/newtopic/?group=53">我有新话题 <i
+        class='fa fa-commenting-o'></i></a></span>
+    </h3>
+
+    <!-- BEGIN .container -->
+    <div class="container">
+
+
+      <!-- BEGIN .grid-4 -->
+      <div class="grid-4 floated-thumb">
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="author-thumb">
+
+          <a target="_blank" href="http://www.jobbole.com/members/wx1874619005" ">
+          <img src="http://jbcdn2.b0.upaiyun.com/2015/04/8fbdaaa5ea6d3b49c8c1c825aafeb5d9.png" alt="" width="34"
+               height="34"/>
+          </a>
+
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" target="_blank" title="如何从一个前端转为一个全栈工程师"
+               href="http://group.jobbole.com/32920/?utm_source=web.jobbole.com&utm_medium=sidebar-group-topic">如何从一个前端转为一个全栈工程师</a><br/>
+            <a href="http://group.jobbole.com/author/wx1874619005/">Terrorblade</a> 发起
+            • 4 回复
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="author-thumb">
+
+          <a target="_blank" href="http://www.jobbole.com/members/T429867534" ">
+          <img src="http://q.qlogo.cn/qqapp/208656/2B6C8829139AE9CFDC16D2866092BD8B/100" alt="" width="34" height="34"/>
+          </a>
+
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" target="_blank" title="自学3个月前端，面试机会很少，现在是应该怎么找工作呢？"
+               href="http://group.jobbole.com/26122/?utm_source=web.jobbole.com&utm_medium=sidebar-group-topic">自学3个月前端，面试机会很少，现在...</a><br/>
+            <a href="http://group.jobbole.com/author/t429867534/">Roy云溪</a> 发起
+            • 44 回复
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="author-thumb">
+
+          <a target="_blank" href="http://www.jobbole.com/members/fengzhz" ">
+          <img src="http://q.qlogo.cn/qqapp/208656/F2459BC7E4795880A8059F8878181D5B/100" alt="" width="34" height="34"/>
+          </a>
+
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" target="_blank" title="现在做php，想转大前端，希望大家给点意见。"
+               href="http://group.jobbole.com/15142/?utm_source=web.jobbole.com&utm_medium=sidebar-group-topic">现在做php，想转大前端，希望大家给...</a><br/>
+            <a href="http://group.jobbole.com/author/fengzhz/">木杉</a> 发起
+            • 18 回复
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="author-thumb">
+
+          <a target="_blank" href="http://www.jobbole.com/members/zhang_x_v" ">
+          <img src="http://q.qlogo.cn/qqapp/208656/DFD51829B81F7AF4586BC2F244D238E9/100" alt="" width="34" height="34"/>
+          </a>
+
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" target="_blank" title="年后准备辞职报个前端培训班"
+               href="http://group.jobbole.com/28575/?utm_source=web.jobbole.com&utm_medium=sidebar-group-topic">年后准备辞职报个前端培训班</a><br/>
+            <a href="http://group.jobbole.com/author/zhang_x_v/">Melor</a> 发起
+            • 73 回复
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="author-thumb">
+
+          <a target="_blank" href="http://www.jobbole.com/members/bb1836535938" ">
+          <img src="http://q.qlogo.cn/qqapp/208656/EF88EB07EF6D6D7D6488A1A7DA64ED03/100" alt="" width="34" height="34"/>
+          </a>
+
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" target="_blank" title="做前端，要不要换工作，现在换的话，工作好不好找"
+               href="http://group.jobbole.com/30915/?utm_source=web.jobbole.com&utm_medium=sidebar-group-topic">做前端，要不要换工作，现在换的话，...</a><br/>
+            <a href="http://group.jobbole.com/author/bb1836535938/">红蜻蜓</a> 发起
+            • 83 回复
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="author-thumb">
+
+          <a target="_blank" href="http://www.jobbole.com/members/QBJQBJ520520" ">
+          <img src="http://q.qlogo.cn/qqapp/208656/A33BCC6212CF75F6A3201A1035579E92/100" alt="" width="34" height="34"/>
+          </a>
+
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" target="_blank" title="2018前端未来的路在哪里"
+               href="http://group.jobbole.com/32970/?utm_source=web.jobbole.com&utm_medium=sidebar-group-topic">2018前端未来的路在哪里</a><br/>
+            <a href="http://group.jobbole.com/author/qbjqbj520520/">July丶Rose</a> 发起
+            • 1 回复
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+      </div>
+      <!-- END .grid-4 -->
+
+
+      <div class="clear"></div>
+
+    </div>
+    <!-- END .container -->
+
+    <div id="text-12" class="widget widget_text">
+      <div class="textwidget"><p><a href='http://blog.jobbole.com/106093/' target='_blank'><img
+        src='http://ww2.sinaimg.cn/mw690/bfdcef89gw1f9cf776pjmj208c03c3yt.jpg'/></a></p>
+      </div>
+    </div>
+    <div class="tabs tabbed_widget">
+      <ul class="nav clearfix">
+        <li><a id="link-tab1" href="#tab1" title="本周热门前端文章">本周热门前端文章</a></li>
+        <li><a id="link-tab2" href="#tab2" title="本月热门">本月热门</a></li>
+        <li><a id="link-tab3" href="#tab3" title="热门标签">热门标签</a></li>
+      </ul>
+      <div id="tab1" class="tab">
+        <div class="floated-thumb">
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">0</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95665/" title="给2019前端的5个建议">给2019前端的5个建议</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">1</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95660/" title="基于色键技术的纯客户端实时蒙版弹幕">基于色键技术的纯客户端实时蒙版弹幕</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">2</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95664/" title="当fetch遇到302状态码，会发生什么？">当fetch遇到302状态码，会发生什么？</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+        </div>
+      </div>
+      <div id="tab2" class="tab">
+        <div class="floated-thumb">
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">0</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95622/" title="2019 年 Web 开发技术指南和趋势">2019
+                年 Web 开发技术指南和趋势</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">1</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95631/" title="从零到一：实现通用一镜到底H5">从零到一：实现通用一镜到底H5</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">2</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95665/" title="给2019前端的5个建议">给2019前端的5个建议</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">3</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95617/" title="深入理解浏览器的缓存机制">深入理解浏览器的缓存机制</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">4</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95613/"
+                 title="浏览器与Node的事件循环(Event Loop)有何区别？">浏览器与Node的事件循环(Event Lo...</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">5</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95637/" title="由一个emoji引发的思考">由一个emoji引发的思考</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">6</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95654/"
+                 title="九种跨域方式实现原理">九种跨域方式实现原理</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">7</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95628/" title="JavaScript的数据类型及其检测">JavaScript的数据类型及其检测</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">8</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95636/" title="原生 js 实现移动端 Touch 滑动反弹">原生
+                js 实现移动端 Touch 滑动...</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+
+          <!-- BEGIN .post-meta -->
+          <div class="post-meta  no-thumb">
+
+            <p>
+              <span class="numb">9</span>
+              <a class="meta-title" target="_blank" href="http://web.jobbole.com/95621/" title="JavaScript 代码简洁之道">JavaScript
+                代码简洁之道</a><br/>
+            </p>
+
+          </div>
+          <!-- END .post-meta -->
+
+          <div class="clear"></div>
+
+        </div>
+      </div>
+      <div id="tab3" class="tab"><p><a href='http://web.jobbole.com/tag/ajax/' class='tag-link-748 tag-link-position-1'
+                                       title='8个话题' style='font-size: 9.3076923076923px;'>Ajax</a>
+        <a href='http://web.jobbole.com/tag/angular/' class='tag-link-737 tag-link-position-2' title='17个话题'
+           style='font-size: 11.692307692308px;'>angular</a>
+        <a href='http://web.jobbole.com/tag/angularjs/' class='tag-link-765 tag-link-position-3' title='16个话题'
+           style='font-size: 11.461538461538px;'>AngularJS</a>
+        <a href='http://web.jobbole.com/tag/async/' class='tag-link-1029 tag-link-position-4' title='14个话题'
+           style='font-size: 11.076923076923px;'>async</a>
+        <a href='http://web.jobbole.com/tag/await/' class='tag-link-1600 tag-link-position-5' title='7个话题'
+           style='font-size: 8.9230769230769px;'>await</a>
+        <a href='http://web.jobbole.com/tag/babel/' class='tag-link-991 tag-link-position-6' title='15个话题'
+           style='font-size: 11.230769230769px;'>Babel</a>
+        <a href='http://web.jobbole.com/tag/box-shadow/' class='tag-link-1293 tag-link-position-7' title='5个话题'
+           style='font-size: 8px;'>box-shadow</a>
+        <a href='http://web.jobbole.com/tag/canvas/' class='tag-link-806 tag-link-position-8' title='21个话题'
+           style='font-size: 12.307692307692px;'>Canvas</a>
+        <a href='http://web.jobbole.com/tag/chrome/' class='tag-link-757 tag-link-position-9' title='27个话题'
+           style='font-size: 13.153846153846px;'>Chrome</a>
+        <a href='http://web.jobbole.com/tag/console/' class='tag-link-811 tag-link-position-10' title='6个话题'
+           style='font-size: 8.5384615384615px;'>Console</a>
+        <a href='http://web.jobbole.com/tag/css/' class='tag-link-1245 tag-link-position-11' title='136个话题'
+           style='font-size: 18.461538461538px;'>CSS</a>
+        <a href='http://web.jobbole.com/tag/css3/' class='tag-link-500 tag-link-position-12' title='27个话题'
+           style='font-size: 13.153846153846px;'>CSS3</a>
+        <a href='http://web.jobbole.com/tag/dom/' class='tag-link-815 tag-link-position-13' title='23个话题'
+           style='font-size: 12.615384615385px;'>DOM</a>
+        <a href='http://web.jobbole.com/tag/es6/' class='tag-link-731 tag-link-position-14' title='42个话题'
+           style='font-size: 14.538461538462px;'>es6</a>
+        <a href='http://web.jobbole.com/tag/facebook/' class='tag-link-722 tag-link-position-15' title='6个话题'
+           style='font-size: 8.5384615384615px;'>facebook</a>
+        <a href='http://web.jobbole.com/tag/flexbox/' class='tag-link-1073 tag-link-position-16' title='8个话题'
+           style='font-size: 9.3076923076923px;'>Flexbox</a>
+        <a href='http://web.jobbole.com/tag/float/' class='tag-link-977 tag-link-position-17' title='7个话题'
+           style='font-size: 8.9230769230769px;'>float</a>
+        <a href='http://web.jobbole.com/tag/gulp/' class='tag-link-926 tag-link-position-18' title='12个话题'
+           style='font-size: 10.538461538462px;'>gulp</a>
+        <a href='http://web.jobbole.com/tag/h5/' class='tag-link-1629 tag-link-position-19' title='5个话题'
+           style='font-size: 8px;'>H5</a>
+        <a href='http://web.jobbole.com/tag/html5/' class='tag-link-1244 tag-link-position-20' title='91个话题'
+           style='font-size: 17.076923076923px;'>HTML5</a>
+        <a href='http://web.jobbole.com/tag/http/' class='tag-link-847 tag-link-position-21' title='29个话题'
+           style='font-size: 13.384615384615px;'>HTTP</a>
+        <a href='http://web.jobbole.com/tag/http2/' class='tag-link-1065 tag-link-position-22' title='5个话题'
+           style='font-size: 8px;'>HTTP/2</a>
+        <a href='http://web.jobbole.com/tag/https/' class='tag-link-848 tag-link-position-23' title='7个话题'
+           style='font-size: 8.9230769230769px;'>HTTPS</a>
+        <a href='http://web.jobbole.com/tag/javascript/' class='tag-link-683 tag-link-position-24' title='399个话题'
+           style='font-size: 22px;'>Javascript</a>
+        <a href='http://web.jobbole.com/tag/jquery/' class='tag-link-733 tag-link-position-25' title='31个话题'
+           style='font-size: 13.615384615385px;'>jQuery</a>
+        <a href='http://web.jobbole.com/tag/json/' class='tag-link-830 tag-link-position-26' title='7个话题'
+           style='font-size: 8.9230769230769px;'>JSON</a>
+        <a href='http://web.jobbole.com/tag/mobx/' class='tag-link-1597 tag-link-position-27' title='5个话题'
+           style='font-size: 8px;'>mobx</a>
+        <a href='http://web.jobbole.com/tag/mvc/' class='tag-link-801 tag-link-position-28' title='7个话题'
+           style='font-size: 8.9230769230769px;'>MVC</a>
+        <a href='http://web.jobbole.com/tag/mvvm/' class='tag-link-803 tag-link-position-29' title='6个话题'
+           style='font-size: 8.5384615384615px;'>MVVM</a>
+        <a href='http://web.jobbole.com/tag/node/' class='tag-link-882 tag-link-position-30' title='21个话题'
+           style='font-size: 12.307692307692px;'>node</a>
+        <a href='http://web.jobbole.com/tag/node-js/' class='tag-link-736 tag-link-position-31' title='20个话题'
+           style='font-size: 12.153846153846px;'>node.js</a>
+        <a href='http://web.jobbole.com/tag/nodejs/' class='tag-link-863 tag-link-position-32' title='16个话题'
+           style='font-size: 11.461538461538px;'>NodeJS</a>
+        <a href='http://web.jobbole.com/tag/npm/' class='tag-link-1140 tag-link-position-33' title='11个话题'
+           style='font-size: 10.307692307692px;'>npm</a>
+        <a href='http://web.jobbole.com/tag/png/' class='tag-link-1080 tag-link-position-34' title='5个话题'
+           style='font-size: 8px;'>PNG</a>
+        <a href='http://web.jobbole.com/tag/postcss/' class='tag-link-1050 tag-link-position-35' title='5个话题'
+           style='font-size: 8px;'>POSTCSS</a>
+        <a href='http://web.jobbole.com/tag/promise/' class='tag-link-822 tag-link-position-36' title='21个话题'
+           style='font-size: 12.307692307692px;'>Promise</a>
+        <a href='http://web.jobbole.com/tag/pwa/' class='tag-link-1431 tag-link-position-37' title='10个话题'
+           style='font-size: 10px;'>PWA</a>
+        <a href='http://web.jobbole.com/tag/react/' class='tag-link-866 tag-link-position-38' title='108个话题'
+           style='font-size: 17.692307692308px;'>React</a>
+        <a href='http://web.jobbole.com/tag/reactjs/' class='tag-link-1141 tag-link-position-39' title='8个话题'
+           style='font-size: 9.3076923076923px;'>ReactJS</a>
+        <a href='http://web.jobbole.com/tag/react-native/' class='tag-link-1002 tag-link-position-40' title='8个话题'
+           style='font-size: 9.3076923076923px;'>React Native</a>
+        <a href='http://web.jobbole.com/tag/redux/' class='tag-link-1424 tag-link-position-41' title='13个话题'
+           style='font-size: 10.846153846154px;'>Redux</a>
+        <a href='http://web.jobbole.com/tag/rem/' class='tag-link-1069 tag-link-position-42' title='8个话题'
+           style='font-size: 9.3076923076923px;'>rem</a>
+        <a href='http://web.jobbole.com/tag/service-worker/' class='tag-link-829 tag-link-position-43' title='8个话题'
+           style='font-size: 9.3076923076923px;'>Service Worker</a>
+        <a href='http://web.jobbole.com/tag/settimeout/' class='tag-link-793 tag-link-position-44' title='9个话题'
+           style='font-size: 9.6923076923077px;'>settimeout</a>
+        <a href='http://web.jobbole.com/tag/svg/' class='tag-link-938 tag-link-position-45' title='23个话题'
+           style='font-size: 12.615384615385px;'>SVG</a>
+        <a href='http://web.jobbole.com/tag/this/' class='tag-link-716 tag-link-position-46' title='20个话题'
+           style='font-size: 12.153846153846px;'>this</a>
+        <a href='http://web.jobbole.com/tag/underscore/' class='tag-link-1035 tag-link-position-47' title='15个话题'
+           style='font-size: 11.230769230769px;'>underscore</a>
+        <a href='http://web.jobbole.com/tag/url/' class='tag-link-759 tag-link-position-48' title='5个话题'
+           style='font-size: 8px;'>URL</a>
+        <a href='http://web.jobbole.com/tag/vue/' class='tag-link-1297 tag-link-position-49' title='65个话题'
+           style='font-size: 16px;'>Vue</a>
+        <a href='http://web.jobbole.com/tag/web/' class='tag-link-898 tag-link-position-50' title='8个话题'
+           style='font-size: 9.3076923076923px;'>WEB</a>
+        <a href='http://web.jobbole.com/tag/webgl/' class='tag-link-1079 tag-link-position-51' title='8个话题'
+           style='font-size: 9.3076923076923px;'>WebGL</a>
+        <a href='http://web.jobbole.com/tag/webpack/' class='tag-link-968 tag-link-position-52' title='41个话题'
+           style='font-size: 14.461538461538px;'>webpack</a>
+        <a href='http://web.jobbole.com/tag/xss/' class='tag-link-807 tag-link-position-53' title='12个话题'
+           style='font-size: 10.538461538462px;'>XSS</a>
+        <a href='http://web.jobbole.com/tag/%e4%ba%8b%e4%bb%b6/' class='tag-link-1004 tag-link-position-54'
+           title='10个话题' style='font-size: 10px;'>事件</a>
+        <a href='http://web.jobbole.com/tag/%e4%bb%a3%e7%a0%81/' class='tag-link-1032 tag-link-position-55' title='7个话题'
+           style='font-size: 8.9230769230769px;'>代码</a>
+        <a href='http://web.jobbole.com/tag/%e4%bd%9c%e7%94%a8%e5%9f%9f/' class='tag-link-867 tag-link-position-56'
+           title='8个话题' style='font-size: 9.3076923076923px;'>作用域</a>
+        <a href='http://web.jobbole.com/tag/%e5%86%85%e5%ad%98%e6%b3%84%e6%bc%8f/'
+           class='tag-link-794 tag-link-position-57' title='5个话题' style='font-size: 8px;'>内存泄漏</a>
+        <a href='http://web.jobbole.com/tag/%e5%86%85%e5%ad%98%e6%b3%84%e9%9c%b2/'
+           class='tag-link-795 tag-link-position-58' title='5个话题' style='font-size: 8px;'>内存泄露</a>
+        <a href='http://web.jobbole.com/tag/%e5%87%bd%e6%95%b0/' class='tag-link-861 tag-link-position-59' title='8个话题'
+           style='font-size: 9.3076923076923px;'>函数</a>
+        <a href='http://web.jobbole.com/tag/%e5%87%bd%e6%95%b0%e5%bc%8f%e7%bc%96%e7%a8%8b/'
+           class='tag-link-1136 tag-link-position-60' title='7个话题' style='font-size: 8.9230769230769px;'>函数式编程</a>
+        <a href='http://web.jobbole.com/tag/%e5%89%8d%e7%ab%af/' class='tag-link-779 tag-link-position-61' title='44个话题'
+           style='font-size: 14.692307692308px;'>前端</a>
+        <a href='http://web.jobbole.com/tag/%e5%8a%a8%e7%94%bb/' class='tag-link-819 tag-link-position-62' title='42个话题'
+           style='font-size: 14.538461538462px;'>动画</a>
+        <a href='http://web.jobbole.com/tag/%e5%8e%9f%e5%9e%8b/' class='tag-link-792 tag-link-position-63' title='7个话题'
+           style='font-size: 8.9230769230769px;'>原型</a>
+        <a href='http://web.jobbole.com/tag/%e5%93%8d%e5%ba%94%e5%bc%8f/' class='tag-link-817 tag-link-position-64'
+           title='9个话题' style='font-size: 9.6923076923077px;'>响应式</a>
+        <a href='http://web.jobbole.com/tag/%e5%ad%97%e4%bd%93/' class='tag-link-831 tag-link-position-65' title='9个话题'
+           style='font-size: 9.6923076923077px;'>字体</a>
+        <a href='http://web.jobbole.com/tag/%e5%ae%89%e5%85%a8/' class='tag-link-1401 tag-link-position-66' title='6个话题'
+           style='font-size: 8.5384615384615px;'>安全</a>
+        <a href='http://web.jobbole.com/tag/%e5%af%b9%e8%b1%a1/' class='tag-link-781 tag-link-position-67' title='9个话题'
+           style='font-size: 9.6923076923077px;'>对象</a>
+        <a href='http://web.jobbole.com/tag/%e5%b0%8f%e7%a8%8b%e5%ba%8f/' class='tag-link-1436 tag-link-position-68'
+           title='27个话题' style='font-size: 13.153846153846px;'>小程序</a>
+        <a href='http://web.jobbole.com/tag/%e5%b1%85%e4%b8%ad/' class='tag-link-975 tag-link-position-69' title='6个话题'
+           style='font-size: 8.5384615384615px;'>居中</a>
+        <a href='http://web.jobbole.com/tag/%e5%b7%a5%e5%85%b7/' class='tag-link-763 tag-link-position-70' title='10个话题'
+           style='font-size: 10px;'>工具</a>
+        <a href='http://web.jobbole.com/tag/%e5%b8%83%e5%b1%80/' class='tag-link-1190 tag-link-position-71' title='9个话题'
+           style='font-size: 9.6923076923077px;'>布局</a>
+        <a href='http://web.jobbole.com/tag/%e5%bc%82%e6%ad%a5/' class='tag-link-891 tag-link-position-72' title='13个话题'
+           style='font-size: 10.846153846154px;'>异步</a>
+        <a href='http://web.jobbole.com/tag/%e6%80%a7%e8%83%bd/' class='tag-link-724 tag-link-position-73' title='25个话题'
+           style='font-size: 12.846153846154px;'>性能</a>
+        <a href='http://web.jobbole.com/tag/%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96/'
+           class='tag-link-738 tag-link-position-74' title='22个话题' style='font-size: 12.461538461538px;'>性能优化</a>
+        <a href='http://web.jobbole.com/tag/%e6%8f%92%e4%bb%b6/' class='tag-link-878 tag-link-position-75' title='13个话题'
+           style='font-size: 10.846153846154px;'>插件</a>
+        <a href='http://web.jobbole.com/tag/%e6%95%b0%e7%bb%84/' class='tag-link-783 tag-link-position-76' title='20个话题'
+           style='font-size: 12.153846153846px;'>数组</a>
+        <a href='http://web.jobbole.com/tag/%e6%a1%86%e6%9e%b6/' class='tag-link-745 tag-link-position-77' title='20个话题'
+           style='font-size: 12.153846153846px;'>框架</a>
+        <a href='http://web.jobbole.com/tag/%e6%a8%a1%e5%9d%97/' class='tag-link-1175 tag-link-position-78' title='7个话题'
+           style='font-size: 8.9230769230769px;'>模块</a>
+        <a href='http://web.jobbole.com/tag/%e6%a8%a1%e5%9d%97%e5%8c%96/' class='tag-link-1007 tag-link-position-79'
+           title='7个话题' style='font-size: 8.9230769230769px;'>模块化</a>
+        <a href='http://web.jobbole.com/tag/%e6%a8%a1%e6%9d%bf%e5%bc%95%e6%93%8e/'
+           class='tag-link-932 tag-link-position-80' title='9个话题' style='font-size: 9.6923076923077px;'>模板引擎</a>
+        <a href='http://web.jobbole.com/tag/%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f/'
+           class='tag-link-1106 tag-link-position-81' title='7个话题' style='font-size: 8.9230769230769px;'>正则表达式</a>
+        <a href='http://web.jobbole.com/tag/%e6%b5%8b%e8%af%95/' class='tag-link-869 tag-link-position-82' title='12个话题'
+           style='font-size: 10.538461538462px;'>测试</a>
+        <a href='http://web.jobbole.com/tag/%e6%b5%8f%e8%a7%88%e5%99%a8/' class='tag-link-814 tag-link-position-83'
+           title='29个话题' style='font-size: 13.384615384615px;'>浏览器</a>
+        <a href='http://web.jobbole.com/tag/%e6%b8%b8%e6%88%8f/' class='tag-link-1338 tag-link-position-84'
+           title='11个话题' style='font-size: 10.307692307692px;'>游戏</a>
+        <a href='http://web.jobbole.com/tag/%e7%a7%bb%e5%8a%a8%e7%ab%af/' class='tag-link-994 tag-link-position-85'
+           title='23个话题' style='font-size: 12.615384615385px;'>移动端</a>
+        <a href='http://web.jobbole.com/tag/%e7%ae%97%e6%b3%95/' class='tag-link-768 tag-link-position-86' title='12个话题'
+           style='font-size: 10.538461538462px;'>算法</a>
+        <a href='http://web.jobbole.com/tag/%e7%bb%84%e4%bb%b6/' class='tag-link-1174 tag-link-position-87'
+           title='16个话题' style='font-size: 11.461538461538px;'>组件</a>
+        <a href='http://web.jobbole.com/tag/%e7%bb%84%e4%bb%b6%e5%8c%96/' class='tag-link-876 tag-link-position-88'
+           title='9个话题' style='font-size: 9.6923076923077px;'>组件化</a>
+        <a href='http://web.jobbole.com/tag/%e7%bb%a7%e6%89%bf/' class='tag-link-885 tag-link-position-89' title='12个话题'
+           style='font-size: 10.538461538462px;'>继承</a>
+        <a href='http://web.jobbole.com/tag/%e7%bc%93%e5%ad%98/' class='tag-link-927 tag-link-position-90' title='19个话题'
+           style='font-size: 12px;'>缓存</a>
+        <a href='http://web.jobbole.com/tag/%e8%81%8c%e5%9c%ba/' class='tag-link-741 tag-link-position-91' title='7个话题'
+           style='font-size: 8.9230769230769px;'>职场</a>
+        <a href='http://web.jobbole.com/tag/%e8%a1%a8%e5%8d%95/' class='tag-link-1025 tag-link-position-92' title='5个话题'
+           style='font-size: 8px;'>表单</a>
+        <a href='http://web.jobbole.com/tag/%e8%b0%83%e8%af%95/' class='tag-link-788 tag-link-position-93' title='22个话题'
+           style='font-size: 12.461538461538px;'>调试</a>
+        <a href='http://web.jobbole.com/tag/%e8%b7%a8%e5%9f%9f/' class='tag-link-834 tag-link-position-94' title='19个话题'
+           style='font-size: 12px;'>跨域</a>
+        <a href='http://web.jobbole.com/tag/%e9%80%89%e6%8b%a9%e5%99%a8/' class='tag-link-727 tag-link-position-95'
+           title='7个话题' style='font-size: 8.9230769230769px;'>选择器</a>
+        <a href='http://web.jobbole.com/tag/%e9%87%8d%e6%9e%84/' class='tag-link-1048 tag-link-position-96' title='5个话题'
+           style='font-size: 8px;'>重构</a>
+        <a href='http://web.jobbole.com/tag/%e9%97%ad%e5%8c%85/' class='tag-link-791 tag-link-position-97' title='20个话题'
+           style='font-size: 12.153846153846px;'>闭包</a>
+        <a href='http://web.jobbole.com/tag/%e9%9d%a2%e8%af%95/' class='tag-link-721 tag-link-position-98' title='28个话题'
+           style='font-size: 13.230769230769px;'>面试</a>
+        <a href='http://web.jobbole.com/tag/%e9%a2%84%e5%8a%a0%e8%bd%bd/' class='tag-link-1009 tag-link-position-99'
+           title='6个话题' style='font-size: 8.5384615384615px;'>预加载</a>
+        <a href='http://web.jobbole.com/tag/%e9%ab%98%e6%80%a7%e8%83%bd/' class='tag-link-899 tag-link-position-100'
+           title='6个话题' style='font-size: 8.5384615384615px;'>高性能</a></p></div>
+    </div>
+    <div id="text-10" class="widget widget_text">
+      <div class="textwidget"><p><a href='http://blog.jobbole.com/84342/' target='_blank'><img
+        src='http://ww2.sinaimg.cn/mw690/e5298966gw1evyjrd4iqcj208c03c0t0.jpg'/></a></p>
+      </div>
+    </div>
+    <h3 class="widget-title">
+      <a target="_blank" href="http://top.jobbole.com/category/news/">业界热点资讯</a>
+      <span style="float:right;"><a target="_blank" href="http://top.jobbole.com/category/news/">更多 &raquo;</a></span>
+    </h3>
+    <!-- BEGIN .container -->
+    <div class="container">
+
+      <!-- BEGIN .grid-4 -->
+      <div class="grid-4 floated-thumb">
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="post-thumb">
+          <a target="_blank"
+             href="http://top.jobbole.com/39313/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news"><img
+            src="http://wx4.sinaimg.cn/mw690/7cc829d3gy1fqz3p82kbhj20xc0hi40j.jpg" alt="" width="50" height="50"/></a>
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" title="密码明文存入 log？Twitter 程序员可能要被祭天了" target="_blank"
+               href="http://top.jobbole.com/39313/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news">密码明文存入
+              log？Twitter 程序员可能要被祭天了</a><br/>
+            2018/05/04 &middot; <i class="fa fa-thumbs-o-up"></i> 78 &middot; <a
+            href="http://top.jobbole.com/39313/#comments" target="_blank"><i class="fa fa-comments-o"></i> 3</a>
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="post-thumb">
+          <a target="_blank"
+             href="http://top.jobbole.com/38654/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news"><img
+            src="http://jbcdn2.b0.upaiyun.com/2015/11/565719730ba5cef93633ac3fb10cd4e5.jpg" alt="" width="50"
+            height="50"/></a>
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" title="地址 1.1.1.1，Cloudflare 推新公共 DNS 服务" target="_blank"
+               href="http://top.jobbole.com/38654/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news">地址
+              1.1.1.1，Cloudflare 推新公共 DNS 服务</a><br/>
+            2018/04/02 &middot; <i class="fa fa-thumbs-o-up"></i> 66 &middot; <a
+            href="http://top.jobbole.com/38654/#comments" target="_blank"><i class="fa fa-comments-o"></i> 6</a>
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="post-thumb">
+          <a target="_blank"
+             href="http://top.jobbole.com/38647/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news"><img
+            src="http://jbcdn2.b0.upaiyun.com/2015/11/565719730ba5cef93633ac3fb10cd4e5.jpg" alt="" width="50"
+            height="50"/></a>
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" title="安卓用 Java 侵犯甲骨文版权，谷歌或赔 88 亿美元" target="_blank"
+               href="http://top.jobbole.com/38647/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news">安卓用 Java
+              侵犯甲骨文版权，谷歌或赔 88 亿美元</a><br/>
+            2018/03/28 &middot; <i class="fa fa-thumbs-o-up"></i> 80 &middot; <a
+            href="http://top.jobbole.com/38647/#comments" target="_blank"><i class="fa fa-comments-o"></i> 3</a>
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="post-thumb">
+          <a target="_blank"
+             href="http://top.jobbole.com/38635/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news"><img
+            src="http://jbcdn2.b0.upaiyun.com/2018/03/a69906b0e7345e52f9adbb5564378044.jpg" alt="" width="50"
+            height="50"/></a>
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" title="李文星家属诉 BOSS直聘：哪怕赔一分 能给个交代也值" target="_blank"
+               href="http://top.jobbole.com/38635/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news">李文星家属诉
+              BOSS直聘：哪怕赔一分 能给个交代也值</a><br/>
+            2018/03/27 &middot; <i class="fa fa-thumbs-o-up"></i> 126 &middot; <a
+            href="http://top.jobbole.com/38635/#comments" target="_blank"><i class="fa fa-comments-o"></i> 4</a>
+
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="post-thumb">
+          <a target="_blank"
+             href="http://top.jobbole.com/38644/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news"><img
+            src="http://jbcdn2.b0.upaiyun.com/2015/11/565719730ba5cef93633ac3fb10cd4e5.jpg" alt="" width="50"
+            height="50"/></a>
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" title="为防止员工加班，韩国政府规定20点必须关闭电脑" target="_blank"
+               href="http://top.jobbole.com/38644/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news">为防止员工加班，韩国政府规定20点必须关闭电脑</a><br/>
+            2018/03/28 &middot; <i class="fa fa-thumbs-o-up"></i> 31
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+        <!-- BEGIN .post-thumb -->
+        <div class="post-thumb">
+          <a target="_blank"
+             href="http://top.jobbole.com/38641/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news"><img
+            src="http://jbcdn2.b0.upaiyun.com/2018/03/35ffa1aa3f0128df440e896716fa9c8b.png" alt="" width="50"
+            height="50"/></a>
+        </div>
+        <!-- END .post-thumb -->
+
+        <!-- BEGIN .post-meta -->
+        <div class="post-meta">
+
+          <p>
+            <a class="meta-title" title="Android Studio 3.1 正式发布，默认使用 D8 Dex 编译器" target="_blank"
+               href="http://top.jobbole.com/38641/?utm_source=web.jobbole.com&utm_medium=sidebar-top-news">Android
+              Studio 3.1 正式发布，默认使用 D8 Dex...</a><br/>
+            2018/03/27 &middot; <i class="fa fa-thumbs-o-up"></i> 48
+          </p>
+
+        </div>
+        <!-- END .post-meta -->
+
+        <div class="clear"></div>
+
+
+      </div>
+      <!-- END .grid-4 -->
+
+
+      <div class="clear"></div>
+
+    </div>
+    <!-- END .container -->
+    <h3 class="widget-title">
+      <a href="http://hao.jobbole.com?catid=67&utm_source=web.jobbole.com&utm_medium=sidebar-resources-more"
+         target="_blank">前端工具资源</a>
+      <span style="float:right;"><a target="_blank"
+                                    href="http://hao.jobbole.com?catid=67&utm_source=web.jobbole.com&utm_medium=sidebar-resources-more">更多资源 &raquo;</a></span>
+    </h3>
+    <div class="container">
+      <div class="grid-4">
+
+        <div class="floated-thumb">
+          <div class="post-thumb">
+            <a target="_blank"
+               href="http://hao.jobbole.com/electron/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+               title="Electron：用Html、CSS和JavaScript构建跨平台的客户端应用程序"><img
+              src="http://jbcdn1.b0.upaiyun.com/2016/11/6f247a88a00a924df5e4745fe5b368a1.png" alt="" width="50"
+              height="50"/></a>
+          </div>
+          <div class="post-meta">
+            <p>
+              <a class="meta-title" target="_blank"
+                 href="http://hao.jobbole.com/electron/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+                 title="Electron：用Html、CSS和JavaScript构建跨平台的客户端应用程序">Electron：用Html、CSS和JavaScript构建跨平台的客...</a><br/>
+              <a href="http://hao.jobbole.com/category/web-front-end/js-mvc-frameworks-and-libraries/"
+                 rel="category tag">MVC框架和库</a>
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="floated-thumb">
+          <div class="post-thumb">
+            <a target="_blank"
+               href="http://hao.jobbole.com/velocity-js/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+               title="Velocity.js：加速JavaScript动画"><img
+              src="http://jbcdn1.b0.upaiyun.com/2016/10/84d3853e5e1fc4c1e57cc2a65bbf00c4.png" alt="" width="50"
+              height="50"/></a>
+          </div>
+          <div class="post-meta">
+            <p>
+              <a class="meta-title" target="_blank"
+                 href="http://hao.jobbole.com/velocity-js/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+                 title="Velocity.js：加速JavaScript动画">Velocity.js：加速JavaScript动画</a><br/>
+              <a href="http://hao.jobbole.com/category/web-front-end/js-animations/" rel="category tag">动画</a>
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="floated-thumb">
+          <div class="post-thumb">
+            <a target="_blank"
+               href="http://hao.jobbole.com/three-js/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+               title="three.js：JavaScript 3D 库"><img
+              src="http://jbcdn1.b0.upaiyun.com/2016/09/3652f87582bc97c7c99fb189bea05090.png" alt="" width="50"
+              height="50"/></a>
+          </div>
+          <div class="post-meta">
+            <p>
+              <a class="meta-title" target="_blank"
+                 href="http://hao.jobbole.com/three-js/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+                 title="three.js：JavaScript 3D 库">three.js：JavaScript 3D 库</a><br/>
+              <a href="http://hao.jobbole.com/category/web-front-end/" rel="category tag">JavaScript</a>, <a
+              href="http://hao.jobbole.com/category/web-front-end/js-data-visualization/js-web-data-visualization-tool/"
+              rel="category tag">Web 数据可视化工具</a> &middot; <a target='_blank'
+                                                             href='http://hao.jobbole.com/three-js/#comments'><i
+              class='fa fa-comments-o'></i> 1</a>
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="floated-thumb">
+          <div class="post-thumb">
+            <a target="_blank"
+               href="http://hao.jobbole.com/jquery-transit/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+               title="jquery.transit：提供流畅CSS3变换和过渡效果的jQuery插件"><img
+              src="http://jbcdn1.b0.upaiyun.com/2016/03/0fd998b50c73eaccea57afccd6d54f3e.png" alt="" width="50"
+              height="50"/></a>
+          </div>
+          <div class="post-meta">
+            <p>
+              <a class="meta-title" target="_blank"
+                 href="http://hao.jobbole.com/jquery-transit/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+                 title="jquery.transit：提供流畅CSS3变换和过渡效果的jQuery插件">jquery.transit：提供流畅CSS3变换和过渡效果的jQuer...</a><br/>
+              <a href="http://hao.jobbole.com/category/web-front-end/" rel="category tag">JavaScript</a>, <a
+              href="http://hao.jobbole.com/category/web-front-end/js-animations/" rel="category tag">动画</a> &middot; <a
+              target='_blank' href='http://hao.jobbole.com/jquery-transit/#comments'><i class='fa fa-comments-o'></i> 1</a>
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="floated-thumb">
+          <div class="post-thumb">
+            <a target="_blank"
+               href="http://hao.jobbole.com/bounce-js/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+               title="bounce.js：创建有趣的CSS3动画"><img
+              src="http://jbcdn1.b0.upaiyun.com/2016/02/50e88fc5cf4dcd40bc8afa5ba52f209e.png" alt="" width="50"
+              height="50"/></a>
+          </div>
+          <div class="post-meta">
+            <p>
+              <a class="meta-title" target="_blank"
+                 href="http://hao.jobbole.com/bounce-js/?utm_source=web.jobbole.com&utm_medium=sidebar-resources"
+                 title="bounce.js：创建有趣的CSS3动画">bounce.js：创建有趣的CSS3动画</a><br/>
+              <a href="http://hao.jobbole.com/category/web-front-end/" rel="category tag">JavaScript</a>, <a
+              href="http://hao.jobbole.com/category/web-front-end/js-animations/" rel="category tag">动画</a>
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEGIN .container -->
+    <div class="container">
+
+      <!-- BEGIN .grid-2 -->
+      <div class="grid-2">
+
+
+      </div>
+      <!-- END .grid-2 -->
+
+      <!-- BEGIN .grid-2 -->
+      <div class="grid-2">
+
+
+      </div>
+      <!-- END .grid-2 -->
+
+      <div class="clear"></div>
+
+    </div>
+    <!-- END .container -->
+
+  </div>
+  <!-- END #sidebar -->
+  <div class="clear"></div>
+
+
+</div>
+<!-- END #wrapper -->
+
+<!-- BEGIN footer -->
+
+<footer>
+
+  <!-- BEGIN .container -->
+  <div class="container">
+
+    <!-- BEGIN .grid-4 -->
+    <div class="grid-4">
+
+      <div id="text-3" class="widget widget_text"><h3 class="widget-title">关于伯乐前端</h3>
+        <div class="textwidget"><p>伯乐前端分享Web前端开发，包括JavaScript，CSS和HTML5开发技术，前端相关的行业动态。</p>
+          <p><b>快速链接</b><br/>
+            <a target='_blank' href="http://blog.jobbole.com/87622/">网站使用指南 » </a><br/>
+            <a target='_blank' href="http://group.jobbole.com/22422/">加入我们 » </a><br/>
+            <a target='_blank' href="http://group.jobbole.com/category/feedback/thanks">问题反馈与求助 » </a><br/>
+            <a target='_blank' href="http://group.jobbole.com/158/">网站积分规则 » </a><br/>
+            <a target='_blank' href="http://group.jobbole.com/175/">网站声望规则 » </a></p>
+        </div>
+      </div>
+    </div>
+    <!-- END .grid-4 -->
+
+    <!-- BEGIN .grid-4 -->
+    <div class="grid-4">
+
+      <div id="text-4" class="widget widget_text"><h3 class="widget-title">关注我们</h3>
+        <div class="textwidget"><p>新浪微博：<a href='http://weibo.com/u/5261893910' target='_blank'>@前端大全</a><br/>
+          RSS：<a href='http://web.jobbole.com/feed/' target='_blank'>订阅地址</a><br/>
+          推荐微信号<br/>
+          <img src='http://wx2.sinaimg.cn/small/63918611gy1fpy4e1ipy9j202s032t9g.jpg' width='100' height='110'/><img
+            src='http://wx2.sinaimg.cn/small/63918611gy1fpy5j1qub8j202s032jrn.jpg' width='100' height='110'/><img
+            src='http://wx4.sinaimg.cn/small/63918611gy1fpy5j6cozdj202s032mxc.jpg' width='100' height='110'/></p>
+          <p><strong>合作联系</strong><br/>
+            Email：<a href='mailto:bd@jobbole.com'>bd@Jobbole.com</a><br/>
+            QQ： 2302462408 （加好友请注明来意）</p>
+        </div>
+      </div>
+    </div>
+    <!-- END .grid-4 -->
+
+    <!-- BEGIN .grid-4 -->
+    <div class="grid-4">
+
+      <div id="text-5" class="widget widget_text"><h3 class="widget-title">更多频道</h3>
+        <div class="textwidget"><p><a
+          href='http://group.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText' target='_blank'>小组</a>
+          &#8211; 好的话题、有启发的回复、值得信赖的圈子<br/>
+          <a href='http://top.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText' target='_blank'>头条</a>
+          &#8211; 分享和发现有价值的内容与观点<br/>
+          <a href='https://www.mxdxlove.cn/?from=25' target='_blank'>面向对象相亲</a> &#8211; 为IT单身男女服务的相亲平台<br/>
+          <a href='http://hao.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText' target='_blank'>资源</a>
+          &#8211; 优秀的工具资源导航<br/>
+          <a href='http://fanyi.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText'
+             target='_blank'>翻译</a> &#8211; 翻译传播优秀的外文文章<br/>
+          <a href='http://blog.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText' target='_blank'>文章</a>
+          &#8211; 国内外的精选文章<br/>
+          <a href='http://design.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText'
+             target='_blank'>设计</a> &#8211; UI,网页，交互和用户体验<br/>
+          <a href='http://ios.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText' target='_blank'>iOS</a>
+          &#8211; 专注iOS技术分享<br/>
+          <a href='http://android.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText'
+             target='_blank'>安卓</a> &#8211; 专注Android技术分享<br/>
+          <a href='http://web.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText' target='_blank'>前端</a>
+          &#8211; JavaScript, HTML5, CSS<br/>
+          <a href='http://www.importnew.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText'
+             target='_blank'>Java</a> &#8211; 专注Java技术分享<br/>
+          <a href='http://python.jobbole.com/?utm_source=web.jobbole.com&amp;utm_medium=bottomText' target='_blank'>Python</a>
+          &#8211; 专注Python技术分享</p>
+        </div>
+      </div>
+    </div>
+    <!-- END .grid-4 -->
+
+    <div class="clear"></div>
+
+  </div>
+  <!-- END .container -->
+
+  <!-- BEGIN #bottom -->
+  <div id="bottom">
+
+    <!-- BEGIN .container -->
+    <div class="container">
+
+      <!-- BEGIN .grid-12 -->
+      <div class="grid-12">
+
+        <p>&copy; 2019 伯乐在线
+          <span style="margin: 0 40px;">
+                        <a href="http://blog.jobbole.com">文章</a>&nbsp;&nbsp;
+                        <a href="http://group.jobbole.com">小组</a>&nbsp;&nbsp;
+                        <a href="https://www.mxdxlove.cn/?from=25" target="_blank">相亲</a>&nbsp;&nbsp;
+                        <a href="http://group.jobbole.com/22422/">加入我们</a>&nbsp;&nbsp;
+                        <a href="http://group.jobbole.com/category/feedback/thanks/"><i
+                          class="fa fa-bullhorn"></i> 反馈</a>
+                    </span>
+          <a target="_blank" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">沪ICP备14046347号-1</a>
+        </p>
+      </div>
+      <!-- END .grid-12 -->
+
+      <div class="clear"></div>
+
+    </div>
+    <!-- END .container -->
+
+  </div>
+  <!-- END #bottom -->
+</footer>
+
+
+<!-- END footer -->
+
+
+<script type='text/javascript'>
+  /* <![CDATA[ */
+  var thickboxL10n = {
+    "next": "\u4e0b\u4e00\u9875 >",
+    "prev": "< \u4e0a\u4e00\u9875",
+    "image": "\u56fe\u50cf",
+    "of": "\/",
+    "close": "\u5173\u95ed",
+    "noiframes": "\u8fd9\u4e2a\u529f\u80fd\u9700\u8981iframe\u7684\u652f\u6301\u3002\u60a8\u53ef\u80fd\u7981\u6b62\u4e86iframe\u7684\u663e\u793a\uff0c\u6216\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u529f\u80fd\u3002",
+    "loadingAnimation": "http:\/\/web.jobbole.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"
+  };
+  /* ]]> */
+</script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='http://web.jobbole.com/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript' src='http://web.jobbole.com/wp-includes/js/shortcode.min.js?ver=4.5.16'></script>
+<script type='text/javascript' src='http://web.jobbole.com/wp-admin/js/media-upload.min.js?ver=4.5.16'></script>
+<script type='text/javascript' src='http://web.jobbole.com/wp-includes/js/comment-reply.min.js?ver=4.5.16'></script>
+<script type='text/javascript'>
+  /* <![CDATA[ */
+  var quicktagsL10n = {
+    "closeAllOpenTags": "\u5173\u95ed\u6240\u6709\u6253\u5f00\u7684\u6807\u7b7e",
+    "closeTags": "\u5173\u95ed\u6807\u7b7e",
+    "enterURL": "\u8f93\u5165URL",
+    "enterImageURL": "\u8f93\u5165\u56fe\u50cfURL",
+    "enterImageDescription": "\u4e3a\u56fe\u50cf\u8f93\u5165\u63cf\u8ff0",
+    "textdirection": "\u6587\u672c\u65b9\u5411",
+    "toggleTextdirection": "\u5207\u6362\u7f16\u8f91\u5668\u6587\u672c\u4e66\u5199\u65b9\u5411",
+    "dfw": "\u514d\u6253\u6270\u5199\u4f5c\u6a21\u5f0f",
+    "strong": "\u7c97\u4f53",
+    "strongClose": "\u5173\u95ed\u7c97\u4f53\u6807\u7b7e",
+    "em": "\u659c\u4f53",
+    "emClose": "\u5173\u95ed\u659c\u4f53\u6807\u7b7e",
+    "link": "\u63d2\u5165\u94fe\u63a5",
+    "blockquote": "\u5757\u5f15\u7528",
+    "blockquoteClose": "\u5173\u95ed\u5757\u5f15\u7528\u6807\u7b7e",
+    "del": "\u5220\u9664\u7684\u6587\u5b57\uff08\u5220\u9664\u7ebf\uff09",
+    "delClose": "\u5173\u95ed\u5220\u9664\u7ebf\u6807\u7b7e",
+    "ins": "\u63d2\u5165\u7684\u6587\u5b57",
+    "insClose": "\u5173\u95ed\u63d2\u5165\u7684\u6587\u5b57\u6807\u7b7e",
+    "image": "\u63d2\u5165\u56fe\u50cf",
+    "ul": "\u9879\u76ee\u7b26\u53f7\u5217\u8868",
+    "ulClose": "\u5173\u95ed\u9879\u76ee\u7b26\u53f7\u5217\u8868\u6807\u7b7e",
+    "ol": "\u7f16\u53f7\u5217\u8868",
+    "olClose": "\u5173\u95ed\u7f16\u53f7\u5217\u8868\u6807\u7b7e",
+    "li": "\u5217\u8868\u9879\u76ee",
+    "liClose": "\u5173\u95ed\u5217\u8868\u9879\u76ee\u6807\u7b7e",
+    "code": "\u4ee3\u7801",
+    "codeClose": "\u5173\u95ed\u4ee3\u7801\u6807\u7b7e",
+    "more": "\u63d2\u5165\u201cMore\u201d\u6807\u7b7e"
+  };
+  /* ]]> */
+</script>
+<script type='text/javascript' src='http://web.jobbole.com/wp-includes/js/quicktags.min.js?ver=4.5.16'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/plugins/crayon-syntax-highlighter/util/tag-editor/crayon_qt.js?ver=2.7.1.1'></script>
+<script type='text/javascript'>
+  /* <![CDATA[ */
+  var viewsCacheL10n = {"admin_ajax_url": "http:\/\/web.jobbole.com\/wp-admin\/admin-ajax.php", "post_id": "95665"};
+  /* ]]> */
+</script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/plugins/wp-postviews/postviews-cache.js?ver=1.68'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/ready.js?ver=1.0'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/easing.js?ver=1.3'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/validate.js?ver=1.9.0'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/touchwipe.js?ver=1.1.1'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/caroufredsel.js?ver=5.5.0'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/flexslider.js?ver=2.0'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/jplayer.js?ver=2.1.0'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/fitvids.js?ver=1.0'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/selectnav.js?ver=0.11'></script>
+<script type='text/javascript'
+        src='http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/js/effects.js?ver=1.11'></script>
+<script type='text/javascript' src='http://web.jobbole.com/wp-includes/js/wp-embed.min.js?ver=4.5.16'></script>
+
+
+<div id="full-btm">
+  <a><img src="http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/img/back-btm.png" width="20" border=0
+          alt="跳到底部" title="跳到底部"></a>
+</div>
+
+<script type="text/javascript">
+  jQuery('#full-btm').click(function () {
+    jQuery('html, body').animate({scrollTop: jQuery(document).height()}, 'slow');
+    return false;
+  });
+</script>
+
+<div id="full-top">
+  <a><img src="http://web.jobbole.com/wp-content/themes/jobboleblogv3/_assets/img/back-top.png" width="20" border=0
+          alt="返回顶部" title="返回顶部"></a>
+</div>
+
+<script type="text/javascript">
+  jQuery('#full-top').click(function () {
+    jQuery('html, body').animate({scrollTop: 0}, 'slow');
+    return false;
+  });
+
+</script>
+
+</body>
+<!-- END body -->
+
+</html>
+<!-- END html -->
