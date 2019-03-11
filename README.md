@@ -12,11 +12,11 @@
 
 >   cd ./server
 
->   ../node_modules/.bin/sequelize db:create
+>   ../node_modules/.bin/sequelize db:create(如果不行,  ..\node_modules\.bin\sequelize db:create)
 
->   ../node_modules/.bin/sequelize db:migrate
+>   ../node_modules/.bin/sequelize db:migrate(如果不行,  ..\node_modules\.bin\sequelize db:migrat)
 
->   ../node_modules/.bin/sequelize db:seed:all
+>   ../node_modules/.bin/sequelize db:seed:all(如果不行,  ..\node_modules\.bin\sequelize db:seed:all)
 
 >   node app.js
 ### client端
@@ -25,3 +25,5 @@
 >   npm i
 
 >   npm run serve
+
+### 还有很多功能待完成，暂时只做了发表说说和查看说说功能
